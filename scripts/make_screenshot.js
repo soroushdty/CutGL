@@ -4,7 +4,8 @@ const path = require('path');
 const { ROOT, openPage } = require('../tests/harness.js');
 
 (async () => {
-  const t = await openPage({ viewport: { width: 1360, height: 820 } });
+  // the page's web font is let through, so the picture shows the real type
+  const t = await openPage({ viewport: { width: 1360, height: 820 }, routes: [[/fonts\.(googleapis|gstatic)\.com/, (r) => r.continue()]] });
   const { page } = t;
   await page.evaluate(() => window.CutGL.openSample('blood-pressure'));
   await page.click('#filledOnly');

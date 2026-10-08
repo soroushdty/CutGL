@@ -76,3 +76,30 @@ test('a link that cannot be loaded says so and the page still opens', async () =
     t.errors.splice(0); // the failure is also logged to the console on purpose
   } finally { await t.close(); }
 });
+
+test('theme: follows the system until the toggle is used, then remembers the choice', async () => {
+  const t = await openPage({ colorScheme: 'dark' });
+  const { page } = t;
+  const look = () => page.evaluate(() => ({
+    attr: document.documentElement.dataset.theme || null,
+    bg: getComputedStyle(document.body).backgroundColor,
+    stored: localStorage.getItem('cutgl:theme'),
+    label: document.getElementById('themeBtn').getAttribute('aria-label'),
+  }));
+  const DARK = 'rgb(16, 23, 30)', LIGHT = 'rgb(243, 245, 247)';
+  try {
+    assert.deepEqual(await look(), { attr: null, bg: DARK, stored: null, label: 'Switch to the light theme' });
+    await page.click('#themeBtn');
+    assert.deepEqual(await look(), { attr: 'light', bg: LIGHT, stored: 'light', label: 'Switch to the dark theme' });
+    // the choice outlasts a reload, although the system is still dark
+    await page.reload();
+    await page.waitForFunction(() => window.CutGL && window.CutGL.S.root);
+    assert.deepEqual(await look(), { attr: 'light', bg: LIGHT, stored: 'light', label: 'Switch to the dark theme' });
+    await page.click('#themeBtn');
+    assert.deepEqual(await look(), { attr: 'dark', bg: DARK, stored: 'dark', label: 'Switch to the light theme' });
+    // the system changing does not override a choice made with the toggle
+    await page.emulateMedia({ colorScheme: 'light' });
+    assert.equal((await look()).bg, DARK);
+    assert.deepEqual(t.errors, []);
+  } finally { await t.close(); }
+});

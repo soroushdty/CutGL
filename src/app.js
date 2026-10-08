@@ -904,6 +904,22 @@
     clearTimeout(saveTimer);
     saveTimer = setTimeout(() => saveLocal(false), 900);
   }
+  // ---- theme: light or dark. Until the toggle is used the system's choice applies; the toggle's choice is remembered.
+  const systemDark = matchMedia('(prefers-color-scheme: dark)');
+  const themeNow = () => document.documentElement.dataset.theme || (systemDark.matches ? 'dark' : 'light');
+  function labelTheme() {
+    const to = themeNow() === 'dark' ? 'light' : 'dark';
+    $('themeBtn').title = 'Switch to the ' + to + ' theme';
+    $('themeBtn').setAttribute('aria-label', 'Switch to the ' + to + ' theme');
+  }
+  $('themeBtn').onclick = () => {
+    const to = themeNow() === 'dark' ? 'light' : 'dark';
+    document.documentElement.dataset.theme = to;
+    lsSet('cutgl:theme', to);
+    labelTheme();
+  };
+  systemDark.addEventListener('change', labelTheme);
+  labelTheme();
   $('zoomIn').onclick = () => setZoom(1.1);
   $('zoomOut').onclick = () => setZoom(1 / 1.1);
 
