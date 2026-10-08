@@ -92,6 +92,8 @@ test('Find ignores case and line breaks, counts every match and steps through th
 test('element text can be linked back to the guideline, one element or all at once', async () => {
   await page.setInputFiles('#pickFolder', path.join(ROOT, 'demo', 'sample_blood_pressure'));
   await page.waitForFunction(() => window.CutGL.S.name === 'sample_blood_pressure' && !window.CutGL.S.example && window.CutGL.S.links.length === 24);
+  const linkKeys = () => G(() => window.CutGL.S.links.map((L) => nodePath(L.node).join('.') + ' ' + L.node.name + ' ' + L.page + ':' + L.start + '-' + L.end).sort());
+  const original = await linkKeys();
   await G(() => { const Gm = window.CutGL; Gm.S.links.length = 0; Gm.renderTree(); let n; (function w(x) { if (!n && x.name === 'MainFocus') n = x; x.kids.forEach(w); })(Gm.S.root); Gm.selectNode(n, { reveal: true }); });
   assert.equal(await page.isVisible('#inLocate'), true);
   await page.click('#inLocate');
@@ -100,9 +102,12 @@ test('element text can be linked back to the guideline, one element or all at on
   assert.equal(await page.isVisible('#inLocate'), false);
   await page.click('#mProject'); await page.click('.menu [data-act="locateAll"]');
   await page.waitForFunction(() => /Linked \d+ of \d+ unlinked elements/.test((Array.from(document.querySelectorAll('.toast')).pop() || {}).textContent || ''));
-  assert.match(await lastToast(page), /^Linked 20 of 20 unlinked elements to their passages\.$/);
-  const r = await G(() => { const Gm = window.CutGL; return { short: Gm.S.links.some((L) => L.node.text.length < 15), fixed: Gm.S.links.some((L) => L.node.name === 'Logic' || L.node.name === 'ActionType') }; });
-  assert.deepEqual(r, { short: false, fixed: false }, 'very short text, type values and logic statements are left unlinked');
+  // the one left is a Value ("true"), which is not in the guideline
+  assert.match(await lastToast(page), /^Linked 23 of 24 unlinked elements to their passages\. The rest/);
+  // each element lands on the passage it was cut from: "Strong recommendation" beside its own recommendation,
+  // short text such as "Pregnant women" or "January 2026" beside the linked text around it
+  assert.deepEqual(await linkKeys(), original);
+  assert.equal(await G(() => window.CutGL.S.links.some((L) => L.node.name === 'Logic' || L.node.name === 'ActionType')), false, 'type values and logic statements are left unlinked');
 });
 
 test('a new project from a Word .docx; an old .doc is refused with advice', async () => {

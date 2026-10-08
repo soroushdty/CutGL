@@ -27,7 +27,8 @@ function serve() {
   return new Promise((resolve) => server.listen(0, '127.0.0.1', () => resolve(server)));
 }
 
-// opts: viewport, colorScheme, init (a function run in the page before its scripts), blockFirstCdn
+// opts: viewport, colorScheme, init (a function run in the page before its scripts), blockFirstCdn,
+//       query (appended to the page URL), routes ([pattern, handler] pairs for other sites)
 async function openPage(opts = {}) {
   const server = await serve();
   const browser = await chromium.launch();
@@ -44,8 +45,9 @@ async function openPage(opts = {}) {
     if (m && fs.existsSync(path.join(MODS, 'pdfjs-dist', m[1]))) return route.fulfill({ path: path.join(MODS, 'pdfjs-dist', m[1]) });
     return route.abort(); // fonts and anything else: not needed
   });
+  for (const [re, handler] of opts.routes || []) await page.route(re, handler); // registered later, so tried first
   if (opts.init) await page.addInitScript(opts.init);
-  await page.goto('http://127.0.0.1:' + server.address().port + '/index.html');
+  await page.goto('http://127.0.0.1:' + server.address().port + '/index.html' + (opts.query || ''));
   await page.waitForFunction(() => window.CutGL && window.CutGL.S.root && window.CutGL.S.links.length > 0);
   const close = async () => { await browser.close(); server.close(); };
   return { page, errors, close };

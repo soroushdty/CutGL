@@ -15,12 +15,33 @@ and produces the same GEM XML and the same six reports.
 
 ## Viewing a GEM XML
 
-Drop a GEM `.xml` file on the page, or use **Project → Open → Choose .zip or .xml**. The
-element tree shows the document with each element's definition from the GEM III schema;
-**Filled only** hides the empty elements, and the **Report** menu gives the original
-Recommendations, Detailed, Rules, Decision Variables, Actions and GEM-COGS views. Attach the
-guideline the document was cut from, and **Link element text to passages** finds the text of
-each element in it and highlights the passages.
+Drop a GEM `.xml` file on the page, or use **Project → Open → Choose .zip or .xml**. A GEM XML
+opened on its own opens in **View** mode: the editing tools are put away and **Filled only**
+hides the empty elements. The element tree shows each element's definition from the GEM III
+schema, and the **Report** menu gives the original Recommendations, Detailed, Rules, Decision
+Variables, Actions and GEM-COGS views. Attach the guideline the document was cut from, and
+**Link element text to passages** finds the text of each element in it and highlights the
+passages. **Edit** (top right) brings the tools back.
+
+### Open a document from a link
+
+A link can open a document directly, so you can put a marked-up guideline on a web page:
+
+```
+cutgl/?xml=guidelines/asthma.xml&guideline=guidelines/asthma.pdf
+cutgl/?project=https://example.org/asthma_project.zip
+cutgl/?sample=blood-pressure
+```
+
+- `xml` is a GEM XML file; `guideline`, optional, is the guideline it was cut from. Its
+  passages are linked as the page opens.
+- `project` is a zipped project folder, as **Save project** writes it.
+- `sample` is one of the sample projects: `hand-hygiene`, `inhaler-review` or `blood-pressure`.
+- Add `&edit` to open in Edit mode instead of View.
+
+Paths are relative to the page, or full URLs. A file on another site opens only if that site
+allows other sites to read it (CORS); files beside the page always do. A document opened from a
+link is not stored in the browser, and **View → Copy link to this document** gives the link back.
 
 ## What it does
 
@@ -48,7 +69,11 @@ each element in it and highlights the passages.
   application kept no record.
 - **Link element text to passages** searches the guideline for the text of elements that
   have no link, for one element or the whole tree. It is how a desktop PDF project gets its
-  highlights back.
+  highlights back. Each element is looked for beside the passages already linked around it
+  (its recommendation, its neighbours), so a phrase that recurs, such as "Strong
+  recommendation", lands on its own recommendation, and short text such as a date is linked
+  only where it cannot be mistaken. On the three samples it puts back every link exactly as it
+  was made by hand.
 - **Subtree and Delete** add or remove another copy of an element with its children. New
   copies take the next free `id` for each element name.
 - **Code sets** on every `…Code` element, **types** from the fixed list on `ActionType` and

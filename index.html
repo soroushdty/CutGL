@@ -37,6 +37,7 @@
         <button class="mbtn" id="mView" aria-haspopup="true" aria-expanded="false">View</button>
         <div class="menu" hidden>
           <button data-act="viewXml">View XML</button>
+          <button data-act="copyLink" id="copyLink" hidden title="A link that opens this document, as it was opened">Copy link to this document</button>
           <button data-act="expandAll">Expand whole tree</button>
           <button data-act="collapseAll">Collapse whole tree</button>
         </div>
@@ -55,6 +56,10 @@
     </nav>
     <div class="proj" id="projBox"><span class="proj-label">Project</span><span id="projName" class="proj-name">…</span><span id="projTag" class="pill" hidden>Sample</span></div>
     <div class="bar-right">
+      <div class="mode" role="group" aria-label="Mode">
+        <button id="modeView" aria-pressed="false" title="Read the document: the editing tools are put away">View</button>
+        <button id="modeEdit" aria-pressed="true" title="Mark up the document">Edit</button>
+      </div>
       <form class="find" id="findForm" role="search">
         <input id="findInput" type="search" placeholder="Find in guideline" aria-label="Find in guideline" autocomplete="off">
         <span id="findCount" class="find-count" aria-live="polite"></span>

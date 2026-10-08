@@ -165,6 +165,11 @@ test('GEM II to GEM III: missing GEM III elements are added in schema order, tex
   await page.waitForFunction(() => window.CutGL.S.name === 'older');
   assert.equal(await G(() => looksLikeGem2(window.CutGL.S.root)), true);
   assert.equal(await page.isVisible('.toast button'), true, 'the page offers the conversion');
+  // a GEM XML opens for reading; the conversion changes the document, so it waits for Edit
+  assert.equal(await G(() => window.CutGL.S.view), true);
+  await page.click('#mProject'); await page.click('.menu [data-act="convert"]');
+  assert.equal(await lastToast(page), 'Switch to Edit to change the document.');
+  await page.click('#modeEdit');
   await page.click('#mProject'); await page.click('.menu [data-act="convert"]');
   assert.match(await lastToast(page), /Added 31 GEM III elements that were missing\./);
   const r = await G(() => { const Gm = window.CutGL; const names = (n) => [n.name, n.kids.map(names)]; const want = (function w(s) { return [s.name, s.children.map(w)]; })(Gm.schema.root); return { identity: JSON.stringify(names(Gm.S.root.kids[0])) === JSON.stringify(want[1][0]), gem2: looksLikeGem2(Gm.S.root), title: Gm.S.root.kids[0].kids[0].text }; });

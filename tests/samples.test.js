@@ -94,3 +94,18 @@ test('a project is kept in the browser and comes back after a reload', async () 
   await page.waitForFunction(() => window.CutGL.S.name === 'sample_hand_hygiene' && window.CutGL.S.links.length === 15);
   assert.ok(await lastToast(page) !== undefined);
 });
+
+for (const id of ['hand-hygiene', 'inhaler-review', 'blood-pressure']) {
+  test('sample ' + id + ': linking all text from scratch puts every element back on its own passage', async () => {
+    await page.evaluate((x) => window.CutGL.openSample(x), id);
+    const r = await page.evaluate(async () => {
+      const G = window.CutGL;
+      const keys = () => G.S.links.map((L) => nodePath(L.node).join('.') + ' ' + L.node.name + ' ' + L.page + ':' + L.start + '-' + L.end).sort();
+      const want = keys();
+      G.S.links.length = 0;
+      await G.locateAll(true);
+      return { want, got: keys() };
+    });
+    assert.deepEqual(r.got, r.want);
+  });
+}

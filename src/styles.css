@@ -73,6 +73,15 @@ h3 { font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: u
 .find { display: flex; align-items: center; gap: 6px; }
 .find input { width: 190px; max-width: 46vw; padding: 5px 8px; border: 1px solid var(--line); border-radius: 4px; background: var(--bg); }
 .find-count { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; min-width: 3.5em; }
+.mode { display: flex; }
+.mode button { background: var(--surface); border: 1px solid var(--line); padding: 4px 11px; font-weight: 500; font-size: 13px; }
+.mode button:first-child { border-radius: 4px 0 0 4px; }
+.mode button:last-child { border-radius: 0 4px 4px 0; border-left: 0; }
+.mode button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-fg); }
+.mode button[aria-pressed="false"]:hover { background: var(--surface-2); }
+/* Viewer mode: the editing tools are put away. */
+body.viewing .tools .tool-group, body.viewing #inLogic { display: none !important; }
+body.viewing .field textarea { background: var(--surface); }
 .zoom { display: flex; }
 .zoom button { background: var(--surface); border: 1px solid var(--line); padding: 4px 9px; font-weight: 600; }
 .zoom button:first-child { border-radius: 4px 0 0 4px; font-size: 12px; }
@@ -252,6 +261,9 @@ h3 { font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: u
   .st-note { margin-left: 0; }
   .proj { order: 5; flex-basis: 100%; }
   .find input { width: 140px; }
+  .bar-right { flex-wrap: wrap; gap: 8px; margin-left: 0; width: 100%; }
+  .find { flex: 1 1 120px; min-width: 0; }
+  .find input { width: 100%; min-width: 0; }
   .logic-grid { grid-template-columns: 1fr; }
   .flow-body { padding: 16px 16px 60px; }
   .check { margin-left: 0; }

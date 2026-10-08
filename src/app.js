@@ -112,6 +112,7 @@
   // ---------------------------------------------------------------- state
   const schema = parseSchema(RES.xsd);
   const S = {
+    view: false, link: null,
     name: '', root: null, sel: null, links: [], example: false, filled: false, zoom: 1,
     src: { type: 'none', name: '', bytes: null }, flowEl: null, find: null, customXsl: {},
   };
@@ -168,7 +169,7 @@
     if (!S.root || !S.name) return;
     try {
       await DB.put('projects', {
-        name: S.name, updated: Date.now(), example: S.example, tree: treeToJson(S.root), links: linkRecords(),
+        name: S.name, updated: Date.now(), example: S.example, view: S.view, tree: treeToJson(S.root), links: linkRecords(),
         srcName: S.src.name, srcType: S.src.type, zoom: S.zoom, filled: S.filled,
       });
       if (withSource && S.src.bytes) await DB.put('sources', { name: S.src.name, bytes: S.src.bytes }, S.name);
@@ -210,7 +211,7 @@
     const r = h('div', {
       class: 'row' + (n === S.sel ? ' sel' : '') + (text ? '' : ' empty'), role: 'treeitem', 'aria-level': depth + 1,
       'aria-selected': n === S.sel ? 'true' : 'false', 'aria-expanded': n.kids.length ? String(!!n.open) : null,
-      'data-uid': n.uid, style: '--d:' + depth, draggable: isDraggable(n) ? 'true' : null,
+      'data-uid': n.uid, style: '--d:' + depth, draggable: isDraggable(n) && !S.view ? 'true' : null,
     });
     r.append(n.kids.length ? h('button', { class: 'tw' + (n.open ? ' open' : ''), tabindex: '-1', 'aria-hidden': 'true', text: '▶' }) : h('span', { class: 'tw' }));
     r.append(h('span', { class: 'dot s-' + n.source, title: 'source: ' + n.source }));
@@ -385,6 +386,10 @@
     const logicish = n.name === 'Logic';
     ta.value = isRoot ? '' : n.text;
     ta.disabled = isRoot || typed || logicish;
+    ta.readOnly = S.view;
+    $('inType').disabled = S.view;
+    $('inCode').readOnly = S.view;
+    for (const r of $('inSource').querySelectorAll('input')) r.disabled = r.disabled || S.view;
     const hint = $('inHint');
     hint.hidden = !(typed || logicish);
     if (typed) hint.textContent = 'Choose the type from the list above.';
@@ -940,58 +945,129 @@
   $('findInput').addEventListener('input', () => { if (!$('findInput').value) runFind(''); });
 
   // ---------------------------------------------------------------- link element text back to the guideline
+  // Searches the whole guideline as one folded string. locate(text) finds the first place the text appears,
+  // locate(text, n) the n-th (from 0), and locate(text, {near}) the place inside near (a {lo, hi} span of the
+  // folded string) or, failing that, the one closest to it.
   function buildLocator() {
     const units = searchUnits();
     const starts = [];
     let total = 0;
     for (const u of units) { starts.push(total); total += u.fold.t.length; }
     const all = units.map((u) => u.fold.t).join('');
-    return (text, nth) => {
-      const fq = foldText(text).t;
-      if (!fq) return null;
-      let at = all.indexOf(fq);
-      for (let k = 0; k < (nth || 0) && at !== -1; k++) at = all.indexOf(fq, at + 1);
-      if (at === -1) return null;
+    const segsAt = (at, len) => {
       const segs = [];
       for (let ui = 0; ui < units.length; ui++) {
-        const a = Math.max(at, starts[ui]), b = Math.min(at + fq.length, starts[ui] + units[ui].fold.t.length);
+        const a = Math.max(at, starts[ui]), b = Math.min(at + len, starts[ui] + units[ui].fold.t.length);
         if (b <= a) continue;
         const F = units[ui].fold;
         const start = F.map[a - starts[ui]], end = F.map[b - 1 - starts[ui]] + 1;
         segs.push({ page: units[ui].page, start, end, quote: units[ui].raw.slice(start, end) });
       }
-      return { segs, more: all.indexOf(fq, at + 1) !== -1 };
+      return segs;
     };
+    // The place in the folded string of an offset into a unit's text.
+    const posOf = (page, off) => {
+      const ui = units.findIndex((u) => u.page === page);
+      if (ui < 0) return null;
+      const map = units[ui].fold.map;
+      let lo = 0, hi = map.length;
+      while (lo < hi) { const mid = (lo + hi) >> 1; if (map[mid] < off) lo = mid + 1; else hi = mid; }
+      return starts[ui] + lo;
+    };
+    const locate = (text, opt) => {
+      const fq = foldText(text).t;
+      if (!fq) return null;
+      const hits = [];
+      for (let i = all.indexOf(fq); i !== -1 && hits.length < 2000; i = all.indexOf(fq, i + 1)) hits.push(i);
+      let at = hits[typeof opt === 'number' ? opt : 0];
+      if (at == null) return null;
+      if (opt && opt.near) {
+        const near = opt.near;
+        const inside = hits.find((x) => x >= near.lo && x + fq.length <= near.hi);
+        const dist = (x) => (x < near.lo ? near.lo - x : Math.max(0, x - near.hi));
+        at = inside != null ? inside : hits.reduce((best, x) => (dist(x) < dist(best) ? x : best), hits[0]);
+      }
+      return { segs: segsAt(at, fq.length), more: hits.length > 1, count: hits.length, at, len: fq.length };
+    };
+    // Where an element's text is most likely to be: around the passages already linked in the nearest
+    // enclosing element that has any, its parent's own or those of the parent's other children.
+    // The guideline's top-level sections are as far up as it looks.
+    const own = new Map();
+    locate.track = (L) => {
+      const a = posOf(L.page, L.start), b = posOf(L.page, L.end);
+      if (a == null || b == null) return;
+      const sp = own.get(L.node);
+      own.set(L.node, sp ? { lo: Math.min(sp.lo, a), hi: Math.max(sp.hi, b) } : { lo: a, hi: b });
+    };
+    for (const L of S.links) locate.track(L);
+    locate.spanOf = (node) => own.get(node) || null;
+    locate.anchorOf = (node) => {
+      for (let p = node.parent; p && p.parent; p = p.parent) {
+        let lo = Infinity, hi = -Infinity;
+        walkTree(p, (x) => { const sp = x !== node && own.get(x); if (sp) { lo = Math.min(lo, sp.lo); hi = Math.max(hi, sp.hi); } });
+        if (lo <= hi) return { lo, hi };
+      }
+      return null;
+    };
+    return locate;
+  }
+  // Text shorter than this is linked only close to its ancestor's passage, where it cannot be mistaken.
+  const SHORT_TEXT = 15, CLOSE = 300;
+  function placeText(locate, n) {
+    const near = locate.anchorOf(n);
+    const hit = locate(n.text, near ? { near } : null);
+    if (!hit) return null;
+    const close = !!near && hit.at >= near.lo - CLOSE && hit.at <= near.hi + CLOSE;
+    if (hit.len < SHORT_TEXT && !close) return null;
+    return Object.assign(hit, { close });
   }
   async function locateSelected() {
     const n = S.sel;
     if (!n || !n.parent || !javaTrim(n.text)) return;
     if (S.src.type === 'none') { toast('Attach the guideline document first.'); return; }
     if (S.src.type === 'pdf' && PDF.textsReady) await PDF.textsReady;
-    const hit = buildLocator()(n.text);
+    const locate = buildLocator();
+    const near = locate.anchorOf(n);
+    const hit = locate(n.text, near ? { near } : null);
     if (!hit) { toast('This text does not appear word for word in the guideline.'); return; }
     for (const seg of hit.segs) S.links.push({ node: n, page: seg.page, start: seg.start, end: seg.end, quote: seg.quote });
     changed(false); updateRow(n); renderLinkList(); updateLocateBtn();
     await showLink(S.links.find((L) => L.node === n));
-    toast(hit.more ? 'Linked to the first place this text appears. It appears more than once.' : 'Linked to the passage.');
+    toast(!hit.more ? 'Linked to the passage.' : near ? 'Linked to the place nearest its recommendation. The text appears ' + fmt(hit.count) + ' times.' : 'Linked to the first place this text appears. It appears more than once.');
   }
-  async function locateAll() {
-    if (S.src.type === 'none') { toast('Attach the guideline document first.'); return; }
+  // Links every element that has text but no passage. Elements are placed from the top of the tree down,
+  // so each one is looked for within, or as close as possible to, the passage of its nearest linked ancestor:
+  // a phrase such as "Strong recommendation" lands beside its own recommendation, not at its first appearance.
+  async function locateAll(quiet) {
+    if (S.src.type === 'none') { if (quiet !== true) toast('Attach the guideline document first.'); return { tried: 0, found: 0 }; }
     if (S.src.type === 'pdf' && PDF.textsReady) await PDF.textsReady;
     const locate = buildLocator();
     const linked = new Set(S.links.map((L) => L.node));
-    let tried = 0, found = 0;
-    walkTree(S.root, (n) => {
-      if (!n.parent || linked.has(n) || n.name === 'Logic' || fixedText(n)) return;
-      if (foldText(n.text).t.length < 15) return; // too short to place with confidence
-      tried++;
-      const hit = locate(n.text);
-      if (!hit) return;
-      found++;
-      for (const seg of hit.segs) S.links.push({ node: n, page: seg.page, start: seg.start, end: seg.end, quote: seg.quote });
-    });
+    const todo = [];
+    walkTree(S.root, (n) => { if (n.parent && !linked.has(n) && n.name !== 'Logic' && !fixedText(n) && javaTrim(n.text)) todo.push(n); });
+    const tried = todo.length;
+    let found = 0;
+    // Two passes: the first places the longer texts, the second the short ones (and anything the first could
+    // not place) near the passages the first one found.
+    for (let pass = 0; pass < 2; pass++) {
+      for (const n of todo) {
+        if (linked.has(n) || (pass === 0 && foldText(n.text).t.length < SHORT_TEXT)) continue;
+        const hit = placeText(locate, n);
+        if (!hit) continue;
+        found++;
+        linked.add(n);
+        for (const seg of hit.segs) {
+          const L = { node: n, page: seg.page, start: seg.start, end: seg.end, quote: seg.quote };
+          S.links.push(L);
+          locate.track(L);
+        }
+      }
+    }
     if (found) { changed(false); renderTree(); renderInspector(); queueHighlights(); }
-    toast(tried ? 'Linked ' + fmt(found) + ' of ' + fmt(tried) + ' unlinked elements to their passages.' + (found < tried ? ' The rest do not appear word for word in the guideline.' : '') : 'Every element with text is already linked.', { ms: 8000 });
+    if (quiet !== true) {
+      toast(tried ? 'Linked ' + fmt(found) + ' of ' + fmt(tried) + ' unlinked elements to their passages.' + (found < tried ? ' The rest do not appear word for word in the guideline, or are too short to place.' : '') : 'Every element with text is already linked.', { ms: 8000 });
+    }
+    return { tried, found };
   }
   function updateLocateBtn() {
     const n = S.sel;
@@ -1008,7 +1084,9 @@
     clearTimeout(saveTimer);
     S.name = p.name; S.root = p.root; S.root.open = true; S.sel = S.root;
     S.links = p.links || []; S.example = !!p.example; S.zoom = p.zoom || 1; S.filled = !!p.filled;
-    S.find = null; S.customXsl = {};
+    S.find = null; S.customXsl = {}; S.link = null;
+    $('copyLink').hidden = true;
+    setView(!!p.view, true);
     S.src = p.src && p.src.bytes ? { type: sourceTypeOf(p.src.name), name: p.src.name, bytes: p.src.bytes } : { type: 'none', name: '', bytes: null };
     $('filledOnly').checked = S.filled;
     $('findInput').value = ''; $('findCount').textContent = '';
@@ -1075,7 +1153,7 @@
     return list.map((e) => ({ path: e.path.replace(/\\/g, '/').replace(/^\.?\//, ''), get: e.get }))
       .filter((e) => !/(^|\/)(__MACOSX\/|\._|\.DS_Store|Thumbs\.db)/.test(e.path));
   }
-  async function openEntries(list, hint) {
+  async function openEntries(list, hint, opts) {
     const entries = cleanEntries(list);
     const depth = (p) => p.split('/').length;
     const text = async (e) => decodeText(await e.get());
@@ -1126,28 +1204,86 @@
     }
     if (!src && props.ProjectSourceFile) note += ' The guideline file “' + props.ProjectSourceFile + '” was not in the folder.';
     updateCounts();
-    await saveLocal(true);
+    if (!(opts && opts.store === false)) await saveLocal(true);
     let total = 0;
     walkTree(root, () => { total++; });
     const gem2 = !treeEntry && looksLikeGem2(root);
     toast('Opened ' + name + ': ' + fmt(total) + ' elements.' + note, gem2 ? { action: { label: 'Add GEM III elements', run: convertGem } } : { ms: note ? 9000 : 4200 });
   }
-  async function openZip(buf, fileName) {
+  async function openZip(buf, fileName, opts) {
     await loadScript(CDN.jszip);
     const zip = await window.JSZip.loadAsync(buf);
     const list = Object.values(zip.files).filter((f) => !f.dir).map((f) => ({ path: f.name, get: () => f.async('arraybuffer') }));
-    await openEntries(list, fileName.replace(/\.zip$/i, ''));
+    await openEntries(list, fileName.replace(/\.zip$/i, ''), opts);
   }
-  async function openXmlFile(buf, fileName) {
+  // A GEM XML on its own opens for reading: viewer mode, empty elements hidden. opts.store false keeps it
+  // out of this browser's storage (a document opened from a link is fetched again from the link).
+  async function openXmlFile(buf, fileName, opts) {
+    const o = opts || {};
     const root = parseGemXml(decodeText(buf));
     const name = fileName.replace(/\.xml$/i, '');
-    await setProject({ name, root, src: null, links: [] });
-    await saveLocal(true);
-    let total = 0;
-    walkTree(root, () => { total++; });
-    toast('Opened ' + fileName + ': ' + fmt(total) + ' elements. Attach the guideline document to keep marking up.',
+    await setProject({ name, root, src: null, links: [], view: o.view !== false, filled: o.view !== false });
+    if (o.store !== false) await saveLocal(true);
+    let total = 0, filled = 0;
+    walkTree(root, (n) => { total++; if (javaTrim(n.text)) filled++; });
+    if (o.quiet) return;
+    toast('Opened ' + fileName + ': ' + fmt(total) + ' elements, ' + fmt(filled) + ' with text. Attach the guideline it was cut from to see where the text came from.',
       looksLikeGem2(root) ? { action: { label: 'Add GEM III elements', run: convertGem } } : { ms: 7000 });
   }
+
+  // ---- open from a link: ?xml=…[&guideline=…], ?project=… (a zipped project), ?sample=…; add &edit to open for editing
+  async function fetchBytes(url) {
+    let res;
+    try { res = await fetch(url); } catch (e) {
+      throw new Error('Could not load ' + url + '. It is unreachable, or its server does not let other sites read it (CORS).');
+    }
+    if (!res.ok) throw new Error('Could not load ' + url + ' (HTTP ' + res.status + ').');
+    return res.arrayBuffer();
+  }
+  const fileOf = (url) => decodeURIComponent(new URL(url).pathname.split('/').pop() || 'document');
+  async function openFromLink(q) {
+    const abs = (v) => new URL(v, location.href).href;
+    const view = !q.has('edit');
+    if (q.get('project')) {
+      const u = abs(q.get('project'));
+      await openZip(await fetchBytes(u), fileOf(u), { store: false });
+      if (view) { S.filled = true; $('filledOnly').checked = true; setView(true); }
+    } else {
+      const u = abs(q.get('xml'));
+      await openXmlFile(await fetchBytes(u), fileOf(u), { view, store: false, quiet: true });
+      if (q.get('guideline')) {
+        const g = abs(q.get('guideline'));
+        S.src = { type: sourceTypeOf(fileOf(g)), name: fileOf(g), bytes: await fetchBytes(g) };
+        await showSource();
+        await locateAll(true);
+      }
+      let total = 0;
+      walkTree(S.root, () => { total++; });
+      toast('Opened ' + fileOf(u) + ': ' + fmt(total) + ' elements' + (S.links.length ? ', ' + fmt(S.links.length) + ' passage' + (S.links.length === 1 ? '' : 's') + ' linked in the guideline.' : '.'), { ms: 6000 });
+    }
+    S.link = location.href;
+    $('copyLink').hidden = false;
+    renderTree(); updateCounts();
+  }
+  async function copyLink() {
+    if (!S.link) return;
+    try { await navigator.clipboard.writeText(S.link); toast('Link copied.'); } catch (e) { toast('Copying is blocked here. The link: ' + S.link, { ms: 12000 }); }
+  }
+
+  // ---- viewer mode: the document can be read, searched, linked to its guideline and reported on, not changed
+  const EDIT_ACTS = new Set(['insert', 'append', 'replace', 'clear', 'addSub', 'delSub', 'logic', 'convert']);
+  function setView(on, quiet) {
+    S.view = !!on;
+    document.body.classList.toggle('viewing', S.view);
+    $('modeView').setAttribute('aria-pressed', String(S.view));
+    $('modeEdit').setAttribute('aria-pressed', String(!S.view));
+    if (quiet || !S.root) return;
+    renderTree(); renderInspector(); updateTools();
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(() => saveLocal(false), 900);
+  }
+  $('modeView').onclick = () => setView(true);
+  $('modeEdit').onclick = () => setView(false);
   async function openPicked(files) {
     try {
       if (!files.length) return;
@@ -1169,7 +1305,7 @@
       const srcRec = await DB.get('sources', name);
       const root = treeFromJson(rec.tree);
       await setProject({ name: rec.name, root, links: linksFromRecords(root, rec.links), example: rec.example, zoom: rec.zoom,
-        filled: rec.filled, keepOpen: true, src: srcRec ? { name: srcRec.name, bytes: srcRec.bytes } : null });
+        filled: rec.filled, view: rec.view, keepOpen: true, src: srcRec ? { name: srcRec.name, bytes: srcRec.bytes } : null });
       lsSet('cutgl:last', rec.name);
       return true;
     } catch (e) { fail(e); return false; }
@@ -1528,9 +1664,10 @@
     exportXml,
     convert: convertGem,
     locate: locateSelected,
-    locateAll,
+    locateAll: () => locateAll(false),
     about: () => $('dlgAbout').showModal(),
     viewXml,
+    copyLink,
     expandAll: () => setOpenAll(true),
     collapseAll: () => setOpenAll(false),
     report: (btn) => runReport(btn.dataset.report),
@@ -1556,7 +1693,8 @@
     }
     const act = ev.target.closest('[data-act]');
     closeMenus();
-    if (act && !act.disabled && ACTIONS[act.dataset.act]) ACTIONS[act.dataset.act](act);
+    if (act && !act.disabled && S.view && EDIT_ACTS.has(act.dataset.act)) toast('Switch to Edit to change the document.');
+    else if (act && !act.disabled && ACTIONS[act.dataset.act]) ACTIONS[act.dataset.act](act);
     const closer = ev.target.closest('[data-close]');
     if (closer) { const d = closer.closest('dialog'); if (d) d.close(); }
   });
@@ -1644,6 +1782,14 @@
   // ---------------------------------------------------------------- start
   async function start() {
     let opened = false;
+    const q = new URLSearchParams(location.search);
+    if (q.get('xml') || q.get('project')) {
+      try { await openFromLink(q); return; } catch (e) { fail(e, 'The document in the link could not be opened.'); }
+    } else if (q.get('sample') && SAMPLES.some((x) => x.id === q.get('sample'))) {
+      await openSample(q.get('sample'));
+      if (!q.has('edit')) setView(true);
+      return;
+    }
     const last = lsGet('cutgl:last');
     if (last) {
       try { if (await DB.get('projects', last)) opened = await openStored(last); } catch (e) { opened = false; }
@@ -1656,7 +1802,7 @@
   // Hooks for automated checks.
   window.CutGL = {
     S, PDF, schema, openEntries, openZip, openXmlFile, setProject, selectNode, moveText, renderTree, xsltTransform, reportXsl,
-    runReport, runFind, captureSelection, locateAll, locateSelected, foldText, searchUnits, ensurePdfPage, openSample, projectFiles, saveLocal, containers, ctrText, mkRange,
+    runReport, runFind, captureSelection, locateAll, locateSelected, setView, buildLocator, foldText, searchUnits, ensurePdfPage, openSample, projectFiles, saveLocal, containers, ctrText, mkRange,
     setPending: (p) => { pendingSel = p; queueHighlights(); }, getReport: () => report, HL,
   };
 })();
