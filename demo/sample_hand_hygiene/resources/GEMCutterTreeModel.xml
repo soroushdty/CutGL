@@ -1,0 +1,3984 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0" class="java.beans.XMLDecoder">
+ <object class="javax.swing.tree.DefaultTreeModel">
+  <object class="javax.swing.tree.DefaultMutableTreeNode">
+   <void property="userObject">
+    <object class="gemc.UserObjectBean">
+     <void property="attributeIDProperty">
+      <string>1</string>
+     </void>
+     <void property="attributeSourceProperty">
+      <string>nd</string>
+     </void>
+     <void property="elementProperty">
+      <string>&lt;GuidelineDocument&gt; </string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="javax.swing.tree.DefaultMutableTreeNode">
+     <void property="userObject">
+      <object class="gemc.UserObjectBean">
+       <void property="attributeIDProperty">
+        <string>1</string>
+       </void>
+       <void property="attributeSourceProperty">
+        <string>nd</string>
+       </void>
+       <void property="elementProperty">
+        <string>&lt;Identity&gt; </string>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>explicit</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;GuidelineTitle&gt; Hand Hygiene in Outpatient Clinics </string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;Citation&gt; </string>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="javax.swing.tree.DefaultMutableTreeNode">
+         <void property="userObject">
+          <object class="gemc.UserObjectBean">
+           <void property="attributeIDProperty">
+            <string>1</string>
+           </void>
+           <void property="attributeSourceProperty">
+            <string>nd</string>
+           </void>
+           <void property="elementProperty">
+            <string>&lt;GuidelineLength&gt; </string>
+           </void>
+          </object>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;GEMCutHistory&gt; </string>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="javax.swing.tree.DefaultMutableTreeNode">
+         <void property="userObject">
+          <object class="gemc.UserObjectBean">
+           <void property="attributeIDProperty">
+            <string>1</string>
+           </void>
+           <void property="attributeSourceProperty">
+            <string>nd</string>
+           </void>
+           <void property="elementProperty">
+            <string>&lt;GEMCutVersion&gt; </string>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>1</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;GEMCutAuthor&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>1</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;GEMCutDate&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>explicit</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;ReleaseDate&gt; March 2026 </string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;Availability&gt; </string>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="javax.swing.tree.DefaultMutableTreeNode">
+         <void property="userObject">
+          <object class="gemc.UserObjectBean">
+           <void property="attributeIDProperty">
+            <string>1</string>
+           </void>
+           <void property="attributeSourceProperty">
+            <string>nd</string>
+           </void>
+           <void property="elementProperty">
+            <string>&lt;Electronic&gt; </string>
+           </void>
+          </object>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="javax.swing.tree.DefaultMutableTreeNode">
+         <void property="userObject">
+          <object class="gemc.UserObjectBean">
+           <void property="attributeIDProperty">
+            <string>1</string>
+           </void>
+           <void property="attributeSourceProperty">
+            <string>nd</string>
+           </void>
+           <void property="elementProperty">
+            <string>&lt;Print&gt; </string>
+           </void>
+          </object>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="javax.swing.tree.DefaultMutableTreeNode">
+         <void property="userObject">
+          <object class="gemc.UserObjectBean">
+           <void property="attributeIDProperty">
+            <string>1</string>
+           </void>
+           <void property="attributeSourceProperty">
+            <string>nd</string>
+           </void>
+           <void property="elementProperty">
+            <string>&lt;Contact&gt; </string>
+           </void>
+          </object>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;Status&gt; </string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;CompanionDocument&gt; </string>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="javax.swing.tree.DefaultMutableTreeNode">
+         <void property="userObject">
+          <object class="gemc.UserObjectBean">
+           <void property="attributeIDProperty">
+            <string>1</string>
+           </void>
+           <void property="attributeSourceProperty">
+            <string>nd</string>
+           </void>
+           <void property="elementProperty">
+            <string>&lt;PatientResource&gt; </string>
+           </void>
+          </object>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="javax.swing.tree.DefaultMutableTreeNode">
+         <void property="userObject">
+          <object class="gemc.UserObjectBean">
+           <void property="attributeIDProperty">
+            <string>1</string>
+           </void>
+           <void property="attributeSourceProperty">
+            <string>nd</string>
+           </void>
+           <void property="elementProperty">
+            <string>&lt;QuickReferenceGuide&gt; </string>
+           </void>
+          </object>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="javax.swing.tree.DefaultMutableTreeNode">
+         <void property="userObject">
+          <object class="gemc.UserObjectBean">
+           <void property="attributeIDProperty">
+            <string>1</string>
+           </void>
+           <void property="attributeSourceProperty">
+            <string>nd</string>
+           </void>
+           <void property="elementProperty">
+            <string>&lt;TechnicalReport&gt; </string>
+           </void>
+          </object>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;Adaptation&gt; </string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;StructuredAbstract&gt; </string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="javax.swing.tree.DefaultMutableTreeNode">
+     <void property="userObject">
+      <object class="gemc.UserObjectBean">
+       <void property="attributeIDProperty">
+        <string>1</string>
+       </void>
+       <void property="attributeSourceProperty">
+        <string>nd</string>
+       </void>
+       <void property="elementProperty">
+        <string>&lt;Developer&gt; </string>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>explicit</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;DeveloperName&gt; Example Clinic Quality Committee </string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;CommitteeName&gt; </string>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="javax.swing.tree.DefaultMutableTreeNode">
+         <void property="userObject">
+          <object class="gemc.UserObjectBean">
+           <void property="attributeIDProperty">
+            <string>1</string>
+           </void>
+           <void property="attributeSourceProperty">
+            <string>nd</string>
+           </void>
+           <void property="elementProperty">
+            <string>&lt;CommitteeExpertise&gt; </string>
+           </void>
+          </object>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="javax.swing.tree.DefaultMutableTreeNode">
+         <void property="userObject">
+          <object class="gemc.UserObjectBean">
+           <void property="attributeIDProperty">
+            <string>1</string>
+           </void>
+           <void property="attributeSourceProperty">
+            <string>nd</string>
+           </void>
+           <void property="elementProperty">
+            <string>&lt;CommitteeMember&gt; </string>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>1</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;MemberExpertise&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>1</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;MemberConflict&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>1</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;MemberRole&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;Funding&gt; </string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;Endorser&gt; </string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;ComparableGuideline&gt; </string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;RoleOfSponsor&gt; </string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;ConflictOfInterest&gt; </string>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="javax.swing.tree.DefaultMutableTreeNode">
+         <void property="userObject">
+          <object class="gemc.UserObjectBean">
+           <void property="attributeIDProperty">
+            <string>1</string>
+           </void>
+           <void property="attributeSourceProperty">
+            <string>nd</string>
+           </void>
+           <void property="elementProperty">
+            <string>&lt;COIPolicy&gt; </string>
+           </void>
+          </object>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="javax.swing.tree.DefaultMutableTreeNode">
+         <void property="userObject">
+          <object class="gemc.UserObjectBean">
+           <void property="attributeIDProperty">
+            <string>1</string>
+           </void>
+           <void property="attributeSourceProperty">
+            <string>nd</string>
+           </void>
+           <void property="elementProperty">
+            <string>&lt;COIDisclosure&gt; </string>
+           </void>
+          </object>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="javax.swing.tree.DefaultMutableTreeNode">
+     <void property="userObject">
+      <object class="gemc.UserObjectBean">
+       <void property="attributeIDProperty">
+        <string>1</string>
+       </void>
+       <void property="attributeSourceProperty">
+        <string>nd</string>
+       </void>
+       <void property="elementProperty">
+        <string>&lt;Purpose&gt; </string>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>explicit</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;MainFocus&gt; This guideline describes when and how clinic staff should clean their hands in order to reduce the spread of infection between patients. </string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;Rationale&gt; </string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;Objective&gt; </string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;AvailableOption&gt; </string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;HealthOutcome&gt; </string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;Exception&gt; </string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="javax.swing.tree.DefaultMutableTreeNode">
+     <void property="userObject">
+      <object class="gemc.UserObjectBean">
+       <void property="attributeIDProperty">
+        <string>1</string>
+       </void>
+       <void property="attributeSourceProperty">
+        <string>nd</string>
+       </void>
+       <void property="elementProperty">
+        <string>&lt;IntendedAudience&gt; </string>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>explicit</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;Users&gt; Physicians, nurses and medical assistants working in outpatient clinics. </string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;CareSetting&gt; </string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="javax.swing.tree.DefaultMutableTreeNode">
+     <void property="userObject">
+      <object class="gemc.UserObjectBean">
+       <void property="attributeIDProperty">
+        <string>1</string>
+       </void>
+       <void property="attributeSourceProperty">
+        <string>nd</string>
+       </void>
+       <void property="elementProperty">
+        <string>&lt;MethodOfDevelopment&gt; </string>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;DescriptionEvidenceCollection&gt; </string>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="javax.swing.tree.DefaultMutableTreeNode">
+         <void property="userObject">
+          <object class="gemc.UserObjectBean">
+           <void property="attributeIDProperty">
+            <string>1</string>
+           </void>
+           <void property="attributeSourceProperty">
+            <string>nd</string>
+           </void>
+           <void property="elementProperty">
+            <string>&lt;EvidenceTimePeriod&gt; </string>
+           </void>
+          </object>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="javax.swing.tree.DefaultMutableTreeNode">
+         <void property="userObject">
+          <object class="gemc.UserObjectBean">
+           <void property="attributeIDProperty">
+            <string>1</string>
+           </void>
+           <void property="attributeSourceProperty">
+            <string>nd</string>
+           </void>
+           <void property="elementProperty">
+            <string>&lt;NumberSourceDocuments&gt; </string>
+           </void>
+          </object>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="javax.swing.tree.DefaultMutableTreeNode">
+         <void property="userObject">
+          <object class="gemc.UserObjectBean">
+           <void property="attributeIDProperty">
+            <string>1</string>
+           </void>
+           <void property="attributeSourceProperty">
+            <string>nd</string>
+           </void>
+           <void property="elementProperty">
+            <string>&lt;EvidenceSelectionCriteria&gt; </string>
+           </void>
+          </object>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;DescriptionEvidenceCombination&gt; </string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;CostAnalysis&gt; </string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;SpecificationHarmBenefit&gt; </string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;QuantificationHarmBenefit&gt; </string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;RoleValueJudgment&gt; </string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;RolePatientPreference&gt; </string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;QualifyingStatement&gt; </string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;MethodsToReachJudgment&gt; </string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;RatingScheme&gt; </string>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="javax.swing.tree.DefaultMutableTreeNode">
+         <void property="userObject">
+          <object class="gemc.UserObjectBean">
+           <void property="attributeIDProperty">
+            <string>1</string>
+           </void>
+           <void property="attributeSourceProperty">
+            <string>nd</string>
+           </void>
+           <void property="elementProperty">
+            <string>&lt;EvidenceQualityRatingScheme&gt; </string>
+           </void>
+          </object>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="javax.swing.tree.DefaultMutableTreeNode">
+         <void property="userObject">
+          <object class="gemc.UserObjectBean">
+           <void property="attributeIDProperty">
+            <string>1</string>
+           </void>
+           <void property="attributeSourceProperty">
+            <string>nd</string>
+           </void>
+           <void property="elementProperty">
+            <string>&lt;RecommendationStrengthRatingScheme&gt; </string>
+           </void>
+          </object>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;PatientAndPublicInvolvement&gt; </string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="javax.swing.tree.DefaultMutableTreeNode">
+     <void property="userObject">
+      <object class="gemc.UserObjectBean">
+       <void property="attributeIDProperty">
+        <string>1</string>
+       </void>
+       <void property="attributeSourceProperty">
+        <string>nd</string>
+       </void>
+       <void property="elementProperty">
+        <string>&lt;TargetPopulation&gt; </string>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;Eligibility&gt; </string>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="javax.swing.tree.DefaultMutableTreeNode">
+         <void property="userObject">
+          <object class="gemc.UserObjectBean">
+           <void property="attributeIDProperty">
+            <string>1</string>
+           </void>
+           <void property="attributeSourceProperty">
+            <string>nd</string>
+           </void>
+           <void property="elementProperty">
+            <string>&lt;InclusionCriterion&gt; </string>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>1</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;InclusionCriterionCode&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="javax.swing.tree.DefaultMutableTreeNode">
+         <void property="userObject">
+          <object class="gemc.UserObjectBean">
+           <void property="attributeIDProperty">
+            <string>1</string>
+           </void>
+           <void property="attributeSourceProperty">
+            <string>nd</string>
+           </void>
+           <void property="elementProperty">
+            <string>&lt;ExclusionCriterion&gt; </string>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>1</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;ExclusionCriterionCode&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="javax.swing.tree.DefaultMutableTreeNode">
+     <void property="userObject">
+      <object class="gemc.UserObjectBean">
+       <void property="attributeIDProperty">
+        <string>1</string>
+       </void>
+       <void property="attributeSourceProperty">
+        <string>nd</string>
+       </void>
+       <void property="elementProperty">
+        <string>&lt;KnowledgeComponents&gt; </string>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>explicit</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;Recommendation&gt; Clinic staff should clean their hands with an alcohol-based hand rub before and after every patient contact. </string>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="javax.swing.tree.DefaultMutableTreeNode">
+         <void property="userObject">
+          <object class="gemc.UserObjectBean">
+           <void property="attributeIDProperty">
+            <string>1</string>
+           </void>
+           <void property="attributeSourceProperty">
+            <string>nd</string>
+           </void>
+           <void property="elementProperty">
+            <string>&lt;StatementOfFact&gt; </string>
+           </void>
+          </object>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="javax.swing.tree.DefaultMutableTreeNode">
+         <void property="userObject">
+          <object class="gemc.UserObjectBean">
+           <void property="attributeIDProperty">
+            <string>1</string>
+           </void>
+           <void property="attributeSourceProperty">
+            <string>nd</string>
+           </void>
+           <void property="elementProperty">
+            <string>&lt;Conditional&gt; </string>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>1</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;BenefitHarmAssessment&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>1</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;DecisionVariable&gt; </string>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>1</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;Value&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>1</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;DecisionVariableCode&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>1</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;DecisionVariableDescription&gt; </string>
+               </void>
+              </object>
+             </void>
+             <void method="add">
+              <object class="javax.swing.tree.DefaultMutableTreeNode">
+               <void property="userObject">
+                <object class="gemc.UserObjectBean">
+                 <void property="attributeIDProperty">
+                  <string>1</string>
+                 </void>
+                 <void property="attributeSourceProperty">
+                  <string>nd</string>
+                 </void>
+                 <void property="elementProperty">
+                  <string>&lt;IntentionalVagueness&gt; </string>
+                 </void>
+                </object>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>1</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;TestParameter&gt; </string>
+               </void>
+              </object>
+             </void>
+             <void method="add">
+              <object class="javax.swing.tree.DefaultMutableTreeNode">
+               <void property="userObject">
+                <object class="gemc.UserObjectBean">
+                 <void property="attributeIDProperty">
+                  <string>1</string>
+                 </void>
+                 <void property="attributeSourceProperty">
+                  <string>nd</string>
+                 </void>
+                 <void property="elementProperty">
+                  <string>&lt;Sensitivity&gt; </string>
+                 </void>
+                </object>
+               </void>
+              </object>
+             </void>
+             <void method="add">
+              <object class="javax.swing.tree.DefaultMutableTreeNode">
+               <void property="userObject">
+                <object class="gemc.UserObjectBean">
+                 <void property="attributeIDProperty">
+                  <string>1</string>
+                 </void>
+                 <void property="attributeSourceProperty">
+                  <string>nd</string>
+                 </void>
+                 <void property="elementProperty">
+                  <string>&lt;Specificity&gt; </string>
+                 </void>
+                </object>
+               </void>
+              </object>
+             </void>
+             <void method="add">
+              <object class="javax.swing.tree.DefaultMutableTreeNode">
+               <void property="userObject">
+                <object class="gemc.UserObjectBean">
+                 <void property="attributeIDProperty">
+                  <string>1</string>
+                 </void>
+                 <void property="attributeSourceProperty">
+                  <string>nd</string>
+                 </void>
+                 <void property="elementProperty">
+                  <string>&lt;PredictiveValue&gt; </string>
+                 </void>
+                </object>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>1</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;DecisionVariableCost&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>1</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;Action&gt; </string>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>1</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;ActionActor&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>1</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;ActionCode&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>1</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;ActionVerb&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>1</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;ActionDeonticTerm&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>1</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;ActionVerbComplement&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>1</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;ActionBenefit&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>1</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;ActionRiskHarm&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>1</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;ActionDescription&gt; </string>
+               </void>
+              </object>
+             </void>
+             <void method="add">
+              <object class="javax.swing.tree.DefaultMutableTreeNode">
+               <void property="userObject">
+                <object class="gemc.UserObjectBean">
+                 <void property="attributeIDProperty">
+                  <string>1</string>
+                 </void>
+                 <void property="attributeSourceProperty">
+                  <string>nd</string>
+                 </void>
+                 <void property="elementProperty">
+                  <string>&lt;IntentionalVagueness&gt; </string>
+                 </void>
+                </object>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>1</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;ActionCost&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>1</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;ActionValue&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>1</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;ActionType&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>1</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;Reason&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>1</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;EvidenceQuality&gt; </string>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>1</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;EvidenceQualityDescription&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>1</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;Disagreement&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>1</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;RecommendationStrength&gt; </string>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>1</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;RecommendationStrengthCode&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>1</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;Flexibility&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>1</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;Logic&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>1</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;Cost&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>1</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;Linkage&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>1</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;Reference&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>1</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;Certainty&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>1</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;Goal&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="javax.swing.tree.DefaultMutableTreeNode">
+         <void property="userObject">
+          <object class="gemc.UserObjectBean">
+           <void property="attributeIDProperty">
+            <string>1</string>
+           </void>
+           <void property="attributeSourceProperty">
+            <string>nd</string>
+           </void>
+           <void property="elementProperty">
+            <string>&lt;Imperative&gt; </string>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>1</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;BenefitHarmAssessment&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>1</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;Scope&gt; </string>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>1</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;ScopeCode&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>1</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>explicit</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;Directive&gt; clean their hands with an alcohol-based hand rub before and after every patient contact </string>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>1</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>explicit</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;DirectiveActor&gt; Clinic staff </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>1</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;DirectiveCode&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>1</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;DirectiveVerb&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>1</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;DirectiveDeonticTerm&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>1</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;DirectiveVerbComplement&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>1</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;DirectiveBenefit&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>1</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;DirectiveRiskHarm&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>1</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;DirectiveDescription&gt; </string>
+               </void>
+              </object>
+             </void>
+             <void method="add">
+              <object class="javax.swing.tree.DefaultMutableTreeNode">
+               <void property="userObject">
+                <object class="gemc.UserObjectBean">
+                 <void property="attributeIDProperty">
+                  <string>1</string>
+                 </void>
+                 <void property="attributeSourceProperty">
+                  <string>nd</string>
+                 </void>
+                 <void property="elementProperty">
+                  <string>&lt;IntentionalVagueness&gt; </string>
+                 </void>
+                </object>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>1</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;DirectiveCost&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>1</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;DirectiveValue&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>1</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>explicit</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;DirectiveType&gt; perform </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>1</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;Reason&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>1</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>explicit</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;EvidenceQuality&gt; moderate-quality evidence </string>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>1</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;EvidenceQualityDescription&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>1</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;Disagreement&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>1</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>explicit</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;RecommendationStrength&gt; Strong recommendation </string>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>1</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;RecommendationStrengthCode&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>1</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;Flexibility&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>1</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;Logic&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>1</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;Cost&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>1</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;Linkage&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>1</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;Reference&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>1</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;Certainty&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>1</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;Goal&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="javax.swing.tree.DefaultMutableTreeNode">
+         <void property="userObject">
+          <object class="gemc.UserObjectBean">
+           <void property="attributeIDProperty">
+            <string>1</string>
+           </void>
+           <void property="attributeSourceProperty">
+            <string>nd</string>
+           </void>
+           <void property="elementProperty">
+            <string>&lt;RecommendationNotes&gt; </string>
+           </void>
+          </object>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>2</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>explicit</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;Recommendation&gt; If hands are visibly soiled, staff should wash them with soap and water for at least 20 seconds instead of using hand rub. </string>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="javax.swing.tree.DefaultMutableTreeNode">
+         <void property="userObject">
+          <object class="gemc.UserObjectBean">
+           <void property="attributeIDProperty">
+            <string>2</string>
+           </void>
+           <void property="attributeSourceProperty">
+            <string>nd</string>
+           </void>
+           <void property="elementProperty">
+            <string>&lt;StatementOfFact&gt; </string>
+           </void>
+          </object>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="javax.swing.tree.DefaultMutableTreeNode">
+         <void property="userObject">
+          <object class="gemc.UserObjectBean">
+           <void property="attributeIDProperty">
+            <string>2</string>
+           </void>
+           <void property="attributeSourceProperty">
+            <string>nd</string>
+           </void>
+           <void property="elementProperty">
+            <string>&lt;Conditional&gt; </string>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>2</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;BenefitHarmAssessment&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>2</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>explicit</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;DecisionVariable&gt; hands are visibly soiled </string>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>2</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>inferred</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;Value&gt; true </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>2</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;DecisionVariableCode&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>2</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;DecisionVariableDescription&gt; </string>
+               </void>
+              </object>
+             </void>
+             <void method="add">
+              <object class="javax.swing.tree.DefaultMutableTreeNode">
+               <void property="userObject">
+                <object class="gemc.UserObjectBean">
+                 <void property="attributeIDProperty">
+                  <string>2</string>
+                 </void>
+                 <void property="attributeSourceProperty">
+                  <string>nd</string>
+                 </void>
+                 <void property="elementProperty">
+                  <string>&lt;IntentionalVagueness&gt; </string>
+                 </void>
+                </object>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>2</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;TestParameter&gt; </string>
+               </void>
+              </object>
+             </void>
+             <void method="add">
+              <object class="javax.swing.tree.DefaultMutableTreeNode">
+               <void property="userObject">
+                <object class="gemc.UserObjectBean">
+                 <void property="attributeIDProperty">
+                  <string>2</string>
+                 </void>
+                 <void property="attributeSourceProperty">
+                  <string>nd</string>
+                 </void>
+                 <void property="elementProperty">
+                  <string>&lt;Sensitivity&gt; </string>
+                 </void>
+                </object>
+               </void>
+              </object>
+             </void>
+             <void method="add">
+              <object class="javax.swing.tree.DefaultMutableTreeNode">
+               <void property="userObject">
+                <object class="gemc.UserObjectBean">
+                 <void property="attributeIDProperty">
+                  <string>2</string>
+                 </void>
+                 <void property="attributeSourceProperty">
+                  <string>nd</string>
+                 </void>
+                 <void property="elementProperty">
+                  <string>&lt;Specificity&gt; </string>
+                 </void>
+                </object>
+               </void>
+              </object>
+             </void>
+             <void method="add">
+              <object class="javax.swing.tree.DefaultMutableTreeNode">
+               <void property="userObject">
+                <object class="gemc.UserObjectBean">
+                 <void property="attributeIDProperty">
+                  <string>2</string>
+                 </void>
+                 <void property="attributeSourceProperty">
+                  <string>nd</string>
+                 </void>
+                 <void property="elementProperty">
+                  <string>&lt;PredictiveValue&gt; </string>
+                 </void>
+                </object>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>2</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;DecisionVariableCost&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>2</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>explicit</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;Action&gt; wash them with soap and water for at least 20 seconds </string>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>2</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;ActionActor&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>2</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;ActionCode&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>2</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;ActionVerb&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>2</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;ActionDeonticTerm&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>2</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;ActionVerbComplement&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>2</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;ActionBenefit&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>2</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;ActionRiskHarm&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>2</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;ActionDescription&gt; </string>
+               </void>
+              </object>
+             </void>
+             <void method="add">
+              <object class="javax.swing.tree.DefaultMutableTreeNode">
+               <void property="userObject">
+                <object class="gemc.UserObjectBean">
+                 <void property="attributeIDProperty">
+                  <string>3</string>
+                 </void>
+                 <void property="attributeSourceProperty">
+                  <string>nd</string>
+                 </void>
+                 <void property="elementProperty">
+                  <string>&lt;IntentionalVagueness&gt; </string>
+                 </void>
+                </object>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>2</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;ActionCost&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>2</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;ActionValue&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>2</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>explicit</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;ActionType&gt; perform </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>2</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;Reason&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>2</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>explicit</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;EvidenceQuality&gt; low-quality evidence </string>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>2</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;EvidenceQualityDescription&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>2</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;Disagreement&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>2</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>explicit</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;RecommendationStrength&gt; Strong recommendation </string>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>2</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;RecommendationStrengthCode&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>2</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;Flexibility&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>2</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>inferred</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;Logic&gt; If 
+hands are visibly soiled is [true]
+Then 
+wash them with soap and water for at least 20 seconds </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>2</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;Cost&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>2</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;Linkage&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>2</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;Reference&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>2</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;Certainty&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>2</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;Goal&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="javax.swing.tree.DefaultMutableTreeNode">
+         <void property="userObject">
+          <object class="gemc.UserObjectBean">
+           <void property="attributeIDProperty">
+            <string>2</string>
+           </void>
+           <void property="attributeSourceProperty">
+            <string>nd</string>
+           </void>
+           <void property="elementProperty">
+            <string>&lt;Imperative&gt; </string>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>3</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;BenefitHarmAssessment&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>2</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;Scope&gt; </string>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>2</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;ScopeCode&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>2</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;Directive&gt; </string>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>2</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;DirectiveActor&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>2</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;DirectiveCode&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>2</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;DirectiveVerb&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>2</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;DirectiveDeonticTerm&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>2</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;DirectiveVerbComplement&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>2</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;DirectiveBenefit&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>2</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;DirectiveRiskHarm&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>2</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;DirectiveDescription&gt; </string>
+               </void>
+              </object>
+             </void>
+             <void method="add">
+              <object class="javax.swing.tree.DefaultMutableTreeNode">
+               <void property="userObject">
+                <object class="gemc.UserObjectBean">
+                 <void property="attributeIDProperty">
+                  <string>4</string>
+                 </void>
+                 <void property="attributeSourceProperty">
+                  <string>nd</string>
+                 </void>
+                 <void property="elementProperty">
+                  <string>&lt;IntentionalVagueness&gt; </string>
+                 </void>
+                </object>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>2</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;DirectiveCost&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>2</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;DirectiveValue&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>2</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;DirectiveType&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>3</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;Reason&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>3</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;EvidenceQuality&gt; </string>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>3</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;EvidenceQualityDescription&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>3</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;Disagreement&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>3</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;RecommendationStrength&gt; </string>
+             </void>
+            </object>
+           </void>
+           <void method="add">
+            <object class="javax.swing.tree.DefaultMutableTreeNode">
+             <void property="userObject">
+              <object class="gemc.UserObjectBean">
+               <void property="attributeIDProperty">
+                <string>3</string>
+               </void>
+               <void property="attributeSourceProperty">
+                <string>nd</string>
+               </void>
+               <void property="elementProperty">
+                <string>&lt;RecommendationStrengthCode&gt; </string>
+               </void>
+              </object>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>3</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;Flexibility&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>3</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;Logic&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>3</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;Cost&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>3</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;Linkage&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>3</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;Reference&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>3</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;Certainty&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>3</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;Goal&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="javax.swing.tree.DefaultMutableTreeNode">
+         <void property="userObject">
+          <object class="gemc.UserObjectBean">
+           <void property="attributeIDProperty">
+            <string>2</string>
+           </void>
+           <void property="attributeSourceProperty">
+            <string>nd</string>
+           </void>
+           <void property="elementProperty">
+            <string>&lt;RecommendationNotes&gt; </string>
+           </void>
+          </object>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;Definition&gt; </string>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="javax.swing.tree.DefaultMutableTreeNode">
+         <void property="userObject">
+          <object class="gemc.UserObjectBean">
+           <void property="attributeIDProperty">
+            <string>1</string>
+           </void>
+           <void property="attributeSourceProperty">
+            <string>nd</string>
+           </void>
+           <void property="elementProperty">
+            <string>&lt;Term&gt; </string>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="javax.swing.tree.DefaultMutableTreeNode">
+           <void property="userObject">
+            <object class="gemc.UserObjectBean">
+             <void property="attributeIDProperty">
+              <string>1</string>
+             </void>
+             <void property="attributeSourceProperty">
+              <string>nd</string>
+             </void>
+             <void property="elementProperty">
+              <string>&lt;TermMeaning&gt; </string>
+             </void>
+            </object>
+           </void>
+          </object>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;Algorithm&gt; </string>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="javax.swing.tree.DefaultMutableTreeNode">
+         <void property="userObject">
+          <object class="gemc.UserObjectBean">
+           <void property="attributeIDProperty">
+            <string>1</string>
+           </void>
+           <void property="attributeSourceProperty">
+            <string>nd</string>
+           </void>
+           <void property="elementProperty">
+            <string>&lt;ActionStep&gt; </string>
+           </void>
+          </object>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="javax.swing.tree.DefaultMutableTreeNode">
+         <void property="userObject">
+          <object class="gemc.UserObjectBean">
+           <void property="attributeIDProperty">
+            <string>1</string>
+           </void>
+           <void property="attributeSourceProperty">
+            <string>nd</string>
+           </void>
+           <void property="elementProperty">
+            <string>&lt;ConditionalStep&gt; </string>
+           </void>
+          </object>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="javax.swing.tree.DefaultMutableTreeNode">
+         <void property="userObject">
+          <object class="gemc.UserObjectBean">
+           <void property="attributeIDProperty">
+            <string>1</string>
+           </void>
+           <void property="attributeSourceProperty">
+            <string>nd</string>
+           </void>
+           <void property="elementProperty">
+            <string>&lt;BranchStep&gt; </string>
+           </void>
+          </object>
+         </void>
+        </object>
+       </void>
+       <void method="add">
+        <object class="javax.swing.tree.DefaultMutableTreeNode">
+         <void property="userObject">
+          <object class="gemc.UserObjectBean">
+           <void property="attributeIDProperty">
+            <string>1</string>
+           </void>
+           <void property="attributeSourceProperty">
+            <string>nd</string>
+           </void>
+           <void property="elementProperty">
+            <string>&lt;SynchronizationStep&gt; </string>
+           </void>
+          </object>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;ResearchAgenda&gt; </string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;BackgroundInformation&gt; </string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="javax.swing.tree.DefaultMutableTreeNode">
+     <void property="userObject">
+      <object class="gemc.UserObjectBean">
+       <void property="attributeIDProperty">
+        <string>1</string>
+       </void>
+       <void property="attributeSourceProperty">
+        <string>nd</string>
+       </void>
+       <void property="elementProperty">
+        <string>&lt;Testing&gt; </string>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;ExternalReview&gt; </string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;PilotTesting&gt; </string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;FormalAppraisal&gt; </string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="javax.swing.tree.DefaultMutableTreeNode">
+     <void property="userObject">
+      <object class="gemc.UserObjectBean">
+       <void property="attributeIDProperty">
+        <string>1</string>
+       </void>
+       <void property="attributeSourceProperty">
+        <string>nd</string>
+       </void>
+       <void property="elementProperty">
+        <string>&lt;RevisionPlan&gt; </string>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;Expiration&gt; </string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;ScheduledReview&gt; </string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="javax.swing.tree.DefaultMutableTreeNode">
+     <void property="userObject">
+      <object class="gemc.UserObjectBean">
+       <void property="attributeIDProperty">
+        <string>1</string>
+       </void>
+       <void property="attributeSourceProperty">
+        <string>nd</string>
+       </void>
+       <void property="elementProperty">
+        <string>&lt;ImplementationPlan&gt; </string>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;ImplementationStrategy&gt; </string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;AnticipatedBarrier&gt; </string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;AnticipatedEnabler&gt; </string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>nd</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;PerformanceMeasure&gt; </string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+    </object>
+   </void>
+  </object>
+ </object>
+</java>

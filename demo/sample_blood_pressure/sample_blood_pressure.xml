@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?><GuidelineDocument xmlns="http://gem.yale.edu" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://gem.yale.edu gemschemaiii.xsd">
+<Identity id="1" source="nd">
+<GuidelineTitle id="1" source="explicit">Measuring Blood Pressure at Clinic Visits</GuidelineTitle>
+<Citation id="1" source="nd">
+<GuidelineLength id="1" source="nd"/>
+</Citation>
+<GEMCutHistory id="1" source="nd">
+<GEMCutVersion id="1" source="nd">
+<GEMCutAuthor id="1" source="nd"/>
+<GEMCutDate id="1" source="nd"/>
+</GEMCutVersion>
+</GEMCutHistory>
+<ReleaseDate id="1" source="explicit">January 2026</ReleaseDate>
+<Availability id="1" source="nd">
+<Electronic id="1" source="nd"/>
+<Print id="1" source="nd"/>
+<Contact id="1" source="nd"/>
+</Availability>
+<Status id="1" source="nd"/>
+<CompanionDocument id="1" source="nd">
+<PatientResource id="1" source="nd"/>
+<QuickReferenceGuide id="1" source="nd"/>
+<TechnicalReport id="1" source="nd"/>
+</CompanionDocument>
+<Adaptation id="1" source="nd"/>
+<StructuredAbstract id="1" source="nd"/>
+</Identity>
+<Developer id="1" source="nd">
+<DeveloperName id="1" source="explicit">Example Primary Care Network</DeveloperName>
+<CommitteeName id="1" source="nd">
+<CommitteeExpertise id="1" source="nd"/>
+<CommitteeMember id="1" source="nd">
+<MemberExpertise id="1" source="nd"/>
+<MemberConflict id="1" source="nd"/>
+<MemberRole id="1" source="nd"/>
+</CommitteeMember>
+</CommitteeName>
+<Funding id="1" source="nd"/>
+<Endorser id="1" source="nd"/>
+<ComparableGuideline id="1" source="nd"/>
+<RoleOfSponsor id="1" source="nd"/>
+<ConflictOfInterest id="1" source="nd">
+<COIPolicy id="1" source="nd"/>
+<COIDisclosure id="1" source="nd"/>
+</ConflictOfInterest>
+</Developer>
+<Purpose id="1" source="nd">
+<MainFocus id="1" source="explicit">This guideline sets out how blood pressure should be measured in adult primary care clinics so that readings are comparable between visits and between clinicians.</MainFocus>
+<Rationale id="1" source="nd"/>
+<Objective id="1" source="nd"/>
+<AvailableOption id="1" source="nd"/>
+<HealthOutcome id="1" source="nd"/>
+<Exception id="1" source="nd"/>
+</Purpose>
+<IntendedAudience id="1" source="nd">
+<Users id="1" source="explicit">Medical assistants, nurses and physicians</Users>
+<CareSetting id="1" source="explicit">primary care clinics</CareSetting>
+</IntendedAudience>
+<MethodOfDevelopment id="1" source="nd">
+<DescriptionEvidenceCollection id="1" source="nd">
+<EvidenceTimePeriod id="1" source="explicit">from 2010 to 2025</EvidenceTimePeriod>
+<NumberSourceDocuments id="1" source="nd"/>
+<EvidenceSelectionCriteria id="1" source="nd"/>
+</DescriptionEvidenceCollection>
+<DescriptionEvidenceCombination id="1" source="nd"/>
+<CostAnalysis id="1" source="nd"/>
+<SpecificationHarmBenefit id="1" source="nd"/>
+<QuantificationHarmBenefit id="1" source="nd"/>
+<RoleValueJudgment id="1" source="nd"/>
+<RolePatientPreference id="1" source="nd"/>
+<QualifyingStatement id="1" source="nd"/>
+<MethodsToReachJudgment id="1" source="nd"/>
+<RatingScheme id="1" source="nd">
+<EvidenceQualityRatingScheme id="1" source="nd"/>
+<RecommendationStrengthRatingScheme id="1" source="explicit">graded each recommendation as strong or conditional</RecommendationStrengthRatingScheme>
+</RatingScheme>
+<PatientAndPublicInvolvement id="1" source="nd"/>
+</MethodOfDevelopment>
+<TargetPopulation id="1" source="nd">
+<Eligibility id="1" source="nd">
+<InclusionCriterion id="1" source="explicit">Adults aged 18 years or older attending a routine clinic visit.<InclusionCriterionCode id="1" source="nd"/>
+</InclusionCriterion>
+<ExclusionCriterion id="1" source="explicit">Pregnant women<ExclusionCriterionCode id="1" source="nd"/>
+</ExclusionCriterion>
+</Eligibility>
+</TargetPopulation>
+<KnowledgeComponents id="1" source="nd">
+<Recommendation id="1" source="explicit">Measure blood pressure after the patient has been seated quietly for at least five minutes.<StatementOfFact id="1" source="nd"/>
+<Conditional id="1" source="nd">
+<BenefitHarmAssessment id="1" source="nd"/>
+<DecisionVariable id="1" source="nd">
+<Value id="1" source="nd"/>
+<DecisionVariableCode id="1" source="nd"/>
+<DecisionVariableDescription id="1" source="nd">
+<IntentionalVagueness id="1" source="nd"/>
+</DecisionVariableDescription>
+<TestParameter id="1" source="nd">
+<Sensitivity id="1" source="nd"/>
+<Specificity id="1" source="nd"/>
+<PredictiveValue id="1" source="nd"/>
+</TestParameter>
+<DecisionVariableCost id="1" source="nd"/>
+</DecisionVariable>
+<Action id="1" source="nd">
+<ActionActor id="1" source="nd"/>
+<ActionCode id="1" source="nd"/>
+<ActionVerb id="1" source="nd"/>
+<ActionDeonticTerm id="1" source="nd"/>
+<ActionVerbComplement id="1" source="nd"/>
+<ActionBenefit id="1" source="nd"/>
+<ActionRiskHarm id="1" source="nd"/>
+<ActionDescription id="1" source="nd">
+<IntentionalVagueness id="1" source="nd"/>
+</ActionDescription>
+<ActionCost id="1" source="nd"/>
+<ActionValue id="1" source="nd"/>
+<ActionType id="1" source="nd"/>
+</Action>
+<Reason id="1" source="nd"/>
+<EvidenceQuality id="1" source="nd">
+<EvidenceQualityDescription id="1" source="nd"/>
+<Disagreement id="1" source="nd"/>
+</EvidenceQuality>
+<RecommendationStrength id="1" source="nd">
+<RecommendationStrengthCode id="1" source="nd"/>
+</RecommendationStrength>
+<Flexibility id="1" source="nd"/>
+<Logic id="1" source="nd"/>
+<Cost id="1" source="nd"/>
+<Linkage id="1" source="nd"/>
+<Reference id="1" source="nd"/>
+<Certainty id="1" source="nd"/>
+<Goal id="1" source="nd"/>
+</Conditional>
+<Imperative id="1" source="nd">
+<BenefitHarmAssessment id="1" source="nd"/>
+<Scope id="1" source="nd">
+<ScopeCode id="1" source="nd"/>
+</Scope>
+<Directive id="1" source="explicit">Measure blood pressure after the patient has been seated quietly for at least five minutes<DirectiveActor id="1" source="nd"/>
+<DirectiveCode id="1" source="nd"/>
+<DirectiveVerb id="1" source="nd"/>
+<DirectiveDeonticTerm id="1" source="nd"/>
+<DirectiveVerbComplement id="1" source="nd"/>
+<DirectiveBenefit id="1" source="nd"/>
+<DirectiveRiskHarm id="1" source="nd"/>
+<DirectiveDescription id="1" source="nd">
+<IntentionalVagueness id="1" source="nd"/>
+</DirectiveDescription>
+<DirectiveCost id="1" source="nd"/>
+<DirectiveValue id="1" source="nd"/>
+<DirectiveType id="1" source="explicit">test/examine</DirectiveType>
+</Directive>
+<Reason id="1" source="nd"/>
+<EvidenceQuality id="1" source="explicit">moderate-quality evidence<EvidenceQualityDescription id="1" source="nd"/>
+<Disagreement id="1" source="nd"/>
+</EvidenceQuality>
+<RecommendationStrength id="1" source="explicit">Strong recommendation<RecommendationStrengthCode id="1" source="nd"/>
+</RecommendationStrength>
+<Flexibility id="1" source="nd"/>
+<Logic id="1" source="nd"/>
+<Cost id="1" source="nd"/>
+<Linkage id="1" source="nd"/>
+<Reference id="1" source="nd"/>
+<Certainty id="1" source="nd"/>
+<Goal id="1" source="nd"/>
+</Imperative>
+<RecommendationNotes id="1" source="nd"/>
+</Recommendation>
+<Recommendation id="2" source="explicit">Use a validated automated device with a cuff sized to the upper arm of the patient.<StatementOfFact id="2" source="nd"/>
+<Conditional id="2" source="nd">
+<BenefitHarmAssessment id="2" source="nd"/>
+<DecisionVariable id="2" source="nd">
+<Value id="2" source="nd"/>
+<DecisionVariableCode id="2" source="nd"/>
+<DecisionVariableDescription id="2" source="nd">
+<IntentionalVagueness id="2" source="nd"/>
+</DecisionVariableDescription>
+<TestParameter id="2" source="nd">
+<Sensitivity id="2" source="nd"/>
+<Specificity id="2" source="nd"/>
+<PredictiveValue id="2" source="nd"/>
+</TestParameter>
+<DecisionVariableCost id="2" source="nd"/>
+</DecisionVariable>
+<Action id="2" source="nd">
+<ActionActor id="2" source="nd"/>
+<ActionCode id="2" source="nd"/>
+<ActionVerb id="2" source="nd"/>
+<ActionDeonticTerm id="2" source="nd"/>
+<ActionVerbComplement id="2" source="nd"/>
+<ActionBenefit id="2" source="nd"/>
+<ActionRiskHarm id="2" source="nd"/>
+<ActionDescription id="2" source="nd">
+<IntentionalVagueness id="3" source="nd"/>
+</ActionDescription>
+<ActionCost id="2" source="nd"/>
+<ActionValue id="2" source="nd"/>
+<ActionType id="2" source="nd"/>
+</Action>
+<Reason id="2" source="nd"/>
+<EvidenceQuality id="2" source="nd">
+<EvidenceQualityDescription id="2" source="nd"/>
+<Disagreement id="2" source="nd"/>
+</EvidenceQuality>
+<RecommendationStrength id="2" source="nd">
+<RecommendationStrengthCode id="2" source="nd"/>
+</RecommendationStrength>
+<Flexibility id="2" source="nd"/>
+<Logic id="2" source="nd"/>
+<Cost id="2" source="nd"/>
+<Linkage id="2" source="nd"/>
+<Reference id="2" source="nd"/>
+<Certainty id="2" source="nd"/>
+<Goal id="2" source="nd"/>
+</Conditional>
+<Imperative id="2" source="nd">
+<BenefitHarmAssessment id="3" source="nd"/>
+<Scope id="2" source="nd">
+<ScopeCode id="2" source="nd"/>
+</Scope>
+<Directive id="2" source="explicit">Use a validated automated device with a cuff sized to the upper arm of the patient<DirectiveActor id="2" source="nd"/>
+<DirectiveCode id="2" source="nd"/>
+<DirectiveVerb id="2" source="nd"/>
+<DirectiveDeonticTerm id="2" source="nd"/>
+<DirectiveVerbComplement id="2" source="nd"/>
+<DirectiveBenefit id="2" source="nd"/>
+<DirectiveRiskHarm id="2" source="nd"/>
+<DirectiveDescription id="2" source="nd">
+<IntentionalVagueness id="4" source="nd"/>
+</DirectiveDescription>
+<DirectiveCost id="2" source="nd"/>
+<DirectiveValue id="2" source="nd"/>
+<DirectiveType id="2" source="nd"/>
+</Directive>
+<Reason id="3" source="nd"/>
+<EvidenceQuality id="3" source="explicit">high-quality evidence<EvidenceQualityDescription id="3" source="nd"/>
+<Disagreement id="3" source="nd"/>
+</EvidenceQuality>
+<RecommendationStrength id="3" source="explicit">Strong recommendation<RecommendationStrengthCode id="3" source="nd"/>
+</RecommendationStrength>
+<Flexibility id="3" source="nd"/>
+<Logic id="3" source="nd"/>
+<Cost id="3" source="nd"/>
+<Linkage id="3" source="nd"/>
+<Reference id="3" source="nd"/>
+<Certainty id="3" source="nd"/>
+<Goal id="3" source="nd"/>
+</Imperative>
+<RecommendationNotes id="2" source="nd"/>
+</Recommendation>
+<Recommendation id="3" source="explicit">If the first reading is 140/90 mm Hg or higher, take two further readings one minute apart and record the average of the last two.<StatementOfFact id="3" source="nd"/>
+<Conditional id="3" source="nd">
+<BenefitHarmAssessment id="4" source="nd"/>
+<DecisionVariable id="3" source="explicit">the first reading is 140/90 mm Hg or higher<Value id="3" source="inferred">true</Value>
+<DecisionVariableCode id="3" source="nd"/>
+<DecisionVariableDescription id="3" source="nd">
+<IntentionalVagueness id="5" source="nd"/>
+</DecisionVariableDescription>
+<TestParameter id="3" source="nd">
+<Sensitivity id="3" source="nd"/>
+<Specificity id="3" source="nd"/>
+<PredictiveValue id="3" source="nd"/>
+</TestParameter>
+<DecisionVariableCost id="3" source="nd"/>
+</DecisionVariable>
+<Action id="3" source="explicit">take two further readings one minute apart and record the average of the last two<ActionActor id="3" source="nd"/>
+<ActionCode id="3" source="nd"/>
+<ActionVerb id="3" source="nd"/>
+<ActionDeonticTerm id="3" source="nd"/>
+<ActionVerbComplement id="3" source="nd"/>
+<ActionBenefit id="3" source="nd"/>
+<ActionRiskHarm id="3" source="nd"/>
+<ActionDescription id="3" source="nd">
+<IntentionalVagueness id="6" source="nd"/>
+</ActionDescription>
+<ActionCost id="3" source="nd"/>
+<ActionValue id="3" source="nd"/>
+<ActionType id="3" source="explicit">test/examine</ActionType>
+</Action>
+<Reason id="4" source="nd"/>
+<EvidenceQuality id="4" source="explicit">low-quality evidence<EvidenceQualityDescription id="4" source="nd"/>
+<Disagreement id="4" source="nd"/>
+</EvidenceQuality>
+<RecommendationStrength id="4" source="explicit">Conditional recommendation<RecommendationStrengthCode id="4" source="nd"/>
+</RecommendationStrength>
+<Flexibility id="4" source="nd"/>
+<Logic id="4" source="inferred">If 
+the first reading is 140/90 mm Hg or higher is [true]
+Then 
+take two further readings one minute apart and record the average of the last two</Logic>
+<Cost id="4" source="nd"/>
+<Linkage id="4" source="nd"/>
+<Reference id="4" source="nd"/>
+<Certainty id="4" source="nd"/>
+<Goal id="4" source="nd"/>
+</Conditional>
+<Imperative id="3" source="nd">
+<BenefitHarmAssessment id="5" source="nd"/>
+<Scope id="3" source="nd">
+<ScopeCode id="3" source="nd"/>
+</Scope>
+<Directive id="3" source="nd">
+<DirectiveActor id="3" source="nd"/>
+<DirectiveCode id="3" source="nd"/>
+<DirectiveVerb id="3" source="nd"/>
+<DirectiveDeonticTerm id="3" source="nd"/>
+<DirectiveVerbComplement id="3" source="nd"/>
+<DirectiveBenefit id="3" source="nd"/>
+<DirectiveRiskHarm id="3" source="nd"/>
+<DirectiveDescription id="3" source="nd">
+<IntentionalVagueness id="7" source="nd"/>
+</DirectiveDescription>
+<DirectiveCost id="3" source="nd"/>
+<DirectiveValue id="3" source="nd"/>
+<DirectiveType id="3" source="nd"/>
+</Directive>
+<Reason id="5" source="nd"/>
+<EvidenceQuality id="5" source="nd">
+<EvidenceQualityDescription id="5" source="nd"/>
+<Disagreement id="5" source="nd"/>
+</EvidenceQuality>
+<RecommendationStrength id="5" source="nd">
+<RecommendationStrengthCode id="5" source="nd"/>
+</RecommendationStrength>
+<Flexibility id="5" source="nd"/>
+<Logic id="5" source="nd"/>
+<Cost id="5" source="nd"/>
+<Linkage id="5" source="nd"/>
+<Reference id="5" source="nd"/>
+<Certainty id="5" source="nd"/>
+<Goal id="5" source="nd"/>
+</Imperative>
+<RecommendationNotes id="3" source="nd"/>
+</Recommendation>
+<Definition id="1" source="nd">
+<Term id="1" source="nd">
+<TermMeaning id="1" source="nd"/>
+</Term>
+</Definition>
+<Algorithm id="1" source="nd">
+<ActionStep id="1" source="nd"/>
+<ConditionalStep id="1" source="nd"/>
+<BranchStep id="1" source="nd"/>
+<SynchronizationStep id="1" source="nd"/>
+</Algorithm>
+<ResearchAgenda id="1" source="nd"/>
+<BackgroundInformation id="1" source="nd"/>
+</KnowledgeComponents>
+<Testing id="1" source="nd">
+<ExternalReview id="1" source="nd"/>
+<PilotTesting id="1" source="nd"/>
+<FormalAppraisal id="1" source="nd"/>
+</Testing>
+<RevisionPlan id="1" source="nd">
+<Expiration id="1" source="nd"/>
+<ScheduledReview id="1" source="explicit">This guideline will be reviewed every three years, or sooner if new evidence appears.</ScheduledReview>
+</RevisionPlan>
+<ImplementationPlan id="1" source="nd">
+<ImplementationStrategy id="1" source="nd"/>
+<AnticipatedBarrier id="1" source="nd"/>
+<AnticipatedEnabler id="1" source="nd"/>
+<PerformanceMeasure id="1" source="nd"/>
+</ImplementationPlan>
+</GuidelineDocument>

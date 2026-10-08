@@ -1,0 +1,23 @@
+{
+  "name": "cutgl",
+  "version": "0.1.0",
+  "private": true,
+  "description": "CutGL (Cutter for Guidelines): GEM Cutter III online. View clinical guidelines marked up as GEM III XML, and mark them up.",
+  "scripts": {
+    "test": "node --test --test-concurrency=1 tests/*.test.js",
+    "serve": "python3 -m http.server 8000",
+    "resources": "python3 scripts/build_resources.py",
+    "demo": "python3 scripts/make_sample_pdf.py && node scripts/make_demo.js",
+    "bundle": "python3 scripts/bundle.py"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "jszip": "3.10.1",
+    "mammoth": "1.6.0",
+    "pdfjs-dist": "3.11.174",
+    "playwright": "1.62.1",
+    "xslt-polyfill": "1.0.29"
+  }
+}

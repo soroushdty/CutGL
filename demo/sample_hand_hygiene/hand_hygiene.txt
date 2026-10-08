@@ -1,0 +1,16 @@
+EXAMPLE GUIDELINE
+Example guideline. The text is invented to demonstrate GEM Cutter and is not clinical guidance.
+
+Hand Hygiene in Outpatient Clinics
+Released March 2026 by the Example Clinic Quality Committee
+
+Purpose
+This guideline describes when and how clinic staff should clean their hands in order to reduce the spread of infection between patients.
+
+Intended users
+Physicians, nurses and medical assistants working in outpatient clinics.
+
+Recommendations
+1. Clinic staff should clean their hands with an alcohol-based hand rub before and after every patient contact. (Strong recommendation; moderate-quality evidence)
+
+2. If hands are visibly soiled, staff should wash them with soap and water for at least 20 seconds instead of using hand rub. (Strong recommendation; low-quality evidence)

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="21.0.12.1" class="java.beans.XMLDecoder">
+ <object class="javax.swing.tree.DefaultTreeModel">
+  <object class="javax.swing.tree.DefaultMutableTreeNode">
+   <void property="userObject">
+    <object class="gemc.UserObjectBean">
+     <void property="attributeIDProperty">
+      <string>1</string>
+     </void>
+     <void property="attributeSourceProperty">
+      <string>nd</string>
+     </void>
+     <void property="elementProperty">
+      <string>&lt;GuidelineDocument&gt;  </string>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="javax.swing.tree.DefaultMutableTreeNode">
+     <void property="userObject">
+      <object class="gemc.UserObjectBean">
+       <void property="attributeIDProperty">
+        <string>1</string>
+       </void>
+       <void property="attributeSourceProperty">
+        <string>nd</string>
+       </void>
+       <void property="elementProperty">
+        <string>&lt;Identity&gt; </string>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>explicit</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;GuidelineTitle&gt; Asthma Care in Adults </string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="javax.swing.tree.DefaultMutableTreeNode">
+     <void property="userObject">
+      <object class="gemc.UserObjectBean">
+       <void property="attributeIDProperty">
+        <string>1</string>
+       </void>
+       <void property="attributeSourceProperty">
+        <string>nd</string>
+       </void>
+       <void property="elementProperty">
+        <string>&lt;KnowledgeComponents&gt; </string>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>explicit</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;Recommendation&gt; Adults with persistent asthma should be offered an inhaled corticosteroid </string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+     <void method="add">
+      <object class="javax.swing.tree.DefaultMutableTreeNode">
+       <void property="userObject">
+        <object class="gemc.UserObjectBean">
+         <void property="attributeIDProperty">
+          <string>1</string>
+         </void>
+         <void property="attributeSourceProperty">
+          <string>explicit</string>
+         </void>
+         <void property="elementProperty">
+          <string>&lt;Recommendation&gt; Review inhaler technique at every visit </string>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+    </object>
+   </void>
+  </object>
+ </object>
+</java>

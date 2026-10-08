@@ -1,0 +1,10 @@
+node_modules/
+dist/
+scripts/java/out/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Your own guideline projects stay local
+local/*
+!local/README.md

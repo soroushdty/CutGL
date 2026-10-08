@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="CutGL, Cutter for Guidelines: GEM Cutter III online. View and mark up clinical guidelines as GEM III XML. Files stay on your computer.">
+<title>CutGL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@600&display=swap">
+<link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+<div id="app">
+  <header class="bar">
+    <div class="brand" title="CutGL, Cutter for Guidelines: GEM Cutter III online">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6.5 3h11L22 9 12 21 2 9z" fill="var(--accent-soft)" stroke="var(--accent)" stroke-width="1.5" stroke-linejoin="round"/><path d="M2 9h20M6.5 3 9 9l3 12 3-12 2.5-6M9 9l3-6 3 6" fill="none" stroke="var(--accent)" stroke-width="1.2" stroke-linejoin="round"/></svg>
+      <span class="brand-name">CutGL</span><span class="brand-ver">GEM III</span>
+    </div>
+    <nav class="menus" aria-label="Main menu">
+      <div class="menu-wrap">
+        <button class="mbtn" id="mProject" aria-haspopup="true" aria-expanded="false">Project</button>
+        <div class="menu" hidden>
+          <button data-act="new">New project…</button>
+          <button data-act="open">Open project…</button>
+          <button data-act="save">Save project (.zip)</button>
+          <button data-act="attach">Attach guideline document…</button>
+          <button data-act="locateAll" title="Search the guideline for each element's text and link the passages found">Link element text to passages</button>
+          <hr>
+          <button data-act="exportXml">Export GEM XML</button>
+          <button data-act="convert">GEM II ⇒ GEM III</button>
+          <hr>
+          <button data-act="about">About</button>
+        </div>
+      </div>
+      <div class="menu-wrap">
+        <button class="mbtn" id="mView" aria-haspopup="true" aria-expanded="false">View</button>
+        <div class="menu" hidden>
+          <button data-act="viewXml">View XML</button>
+          <button data-act="expandAll">Expand whole tree</button>
+          <button data-act="collapseAll">Collapse whole tree</button>
+        </div>
+      </div>
+      <div class="menu-wrap">
+        <button class="mbtn" id="mReport" aria-haspopup="true" aria-expanded="false">Report</button>
+        <div class="menu" hidden>
+          <button data-act="report" data-report="recs">Recommendations</button>
+          <button data-act="report" data-report="detailed">Detailed</button>
+          <button data-act="report" data-report="rules">Rules</button>
+          <button data-act="report" data-report="dvs">Decision Variables</button>
+          <button data-act="report" data-report="action">Actions</button>
+          <button data-act="report" data-report="gem-cogs">GEM-COGS</button>
+        </div>
+      </div>
+    </nav>
+    <div class="proj" id="projBox"><span class="proj-label">Project</span><span id="projName" class="proj-name">…</span><span id="projTag" class="pill" hidden>Sample</span></div>
+    <div class="bar-right">
+      <form class="find" id="findForm" role="search">
+        <input id="findInput" type="search" placeholder="Find in guideline" aria-label="Find in guideline" autocomplete="off">
+        <span id="findCount" class="find-count" aria-live="polite"></span>
+      </form>
+      <button class="btn slim" data-act="save" title="Download the whole project as a .zip (Ctrl+S)">Save</button>
+      <div class="zoom" role="group" aria-label="Guideline text size">
+        <button id="zoomOut" title="Smaller guideline text" aria-label="Smaller guideline text">A−</button>
+        <button id="zoomIn" title="Larger guideline text" aria-label="Larger guideline text">A+</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="tabs" role="tablist" aria-label="Panels">
+    <button role="tab" data-tab="src" aria-selected="true">Guideline</button>
+    <button role="tab" data-tab="tree" aria-selected="false">Elements</button>
+    <button role="tab" data-tab="insp" aria-selected="false">Selected</button>
+  </div>
+
+  <main class="panes" id="panes" data-tab="src">
+    <section class="pane src" id="paneSrc" aria-label="Guideline document">
+      <div class="pane-head">
+        <span class="ph-title">Guideline</span>
+        <span id="srcName" class="ph-sub"></span>
+      </div>
+      <p id="srcHint" class="hint-strip" hidden>A sample project with invented text. Select text below, choose an element in the tree, then press <b>Insert</b>. <b>Project → Open</b> has two more samples and opens your own projects.</p>
+      <div class="src-scroll" id="srcScroll" tabindex="0">
+        <div id="srcDoc" class="src-doc"></div>
+        <div id="srcEmpty" class="empty" hidden>
+          <p><strong>No guideline document attached.</strong></p>
+          <p>Attach the guideline (PDF, HTML, RTF, Word .docx or plain text) to copy passages into elements.</p>
+          <button class="btn" data-act="attach">Attach guideline document…</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="split" id="split" role="separator" aria-orientation="vertical" aria-label="Resize guideline panel" tabindex="0"></div>
+
+    <section class="pane tree" id="paneTree" aria-label="GEM elements">
+      <div class="pane-head tools">
+        <div class="tool-group" role="group" aria-label="Move selected guideline text">
+          <button class="tbtn" id="tInsert" data-act="insert" title="Move the selected guideline text into this element"><span class="ic">→</span>Insert</button>
+          <button class="tbtn" id="tAppend" data-act="append" title="Add the selected guideline text to the end of this element"><span class="ic">⇉</span>Append</button>
+          <button class="tbtn" id="tReplace" data-act="replace" title="Replace this element's text with the selected guideline text"><span class="ic">⇄</span>Replace</button>
+          <button class="tbtn" id="tClear" data-act="clear" title="Remove this element's text"><span class="ic">←</span>Clear</button>
+        </div>
+        <div class="tool-group" role="group" aria-label="Subtrees">
+          <button class="tbtn" id="tAdd" data-act="addSub" title="Create another blank copy of this element and its children"><span class="ic">＋</span>Subtree</button>
+          <button class="tbtn" id="tDel" data-act="delSub" title="Delete this element and its children"><span class="ic">×</span>Delete</button>
+        </div>
+        <div class="tool-group">
+          <button class="tbtn strong" id="tLogic" data-act="logic" title="Open the logic window for this Conditional or Imperative">Logic</button>
+        </div>
+        <label class="check" title="Hide elements that have no text"><input type="checkbox" id="filledOnly"> Filled only</label>
+      </div>
+      <div class="tree" id="tree" role="tree" tabindex="0" aria-label="GEM element tree"></div>
+    </section>
+
+    <section class="pane insp" id="paneInsp" aria-label="Selected element">
+      <div class="pane-head"><span class="ph-title">Selected element</span></div>
+      <div class="insp-body">
+        <div class="in-title"><code id="inName"></code><span id="inId" class="nid"></span></div>
+        <div id="inPath" class="crumbs"></div>
+        <p id="inDef" class="def"></p>
+
+        <fieldset class="seg" id="inSource">
+          <legend>Source attribute</legend>
+          <label title="The text is stated in the guideline"><input type="radio" name="src" id="srcExplicit" value="explicit"><span>explicit</span></label>
+          <label title="The text was worded or inferred by the person marking up"><input type="radio" name="src" id="srcInferred" value="inferred"><span>inferred</span></label>
+          <label title="Not determined"><input type="radio" name="src" id="srcNd" value="nd"><span>nd</span></label>
+        </fieldset>
+
+        <label class="field" id="inTypeWrap" hidden>
+          <span>Type</span>
+          <select id="inType"></select>
+        </label>
+        <label class="field" id="inCodeWrap" hidden>
+          <span>Code set</span>
+          <input id="inCode" list="codeSets" placeholder="e.g. SNOMED-CT" autocomplete="off">
+          <datalist id="codeSets"></datalist>
+        </label>
+
+        <label class="field grow">
+          <span>Element text</span>
+          <textarea id="inText" spellcheck="true" rows="7"></textarea>
+        </label>
+        <p id="inHint" class="hint" hidden></p>
+        <button class="btn" id="inLogic" data-act="logic" hidden>Open logic window</button>
+        <button class="btn" id="inLocate" data-act="locate" hidden title="Search the guideline for this element's text and link the passage">Find this text in the guideline</button>
+
+        <div id="inLinks" class="links"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="status">
+    <span id="stCounts"></span>
+    <span id="stSave" class="st-save"></span>
+    <span class="st-note">Files are read in your browser and are not uploaded.</span>
+  </footer>
+</div>
+
+<input type="file" id="pickFolder" webkitdirectory multiple hidden>
+<input type="file" id="pickFile" accept=".zip,.xml" hidden>
+<input type="file" id="pickDoc" accept=".pdf,.html,.htm,.rtf,.txt,.docx,.doc" hidden>
+<input type="file" id="pickXsl" accept=".xsl,.xslt,.xml" hidden>
+
+<dialog id="dlgNew" class="dlg" aria-labelledby="dlgNewT">
+  <form method="dialog" id="newForm">
+    <h2 id="dlgNewT">New project</h2>
+    <label class="field"><span>Name of project</span><input id="newName" required autocomplete="off" placeholder="e.g. asthma_guideline_2026"></label>
+    <div class="field">
+      <span>Guideline document</span>
+      <div class="file-row"><button type="button" class="btn" id="newPick">Choose file…</button><span id="newFile" class="muted">PDF, HTML, RTF, .docx or plain text. You can attach it later.</span></div>
+    </div>
+    <p id="newErr" class="err" hidden></p>
+    <div class="dlg-actions"><button type="button" class="btn ghost" data-close>Cancel</button><button type="submit" class="btn primary" id="newGo">Create project</button></div>
+  </form>
+</dialog>
+
+<dialog id="dlgOpen" class="dlg wide" aria-labelledby="dlgOpenT">
+  <h2 id="dlgOpenT">Open project</h2>
+  <div class="open-grid">
+    <div>
+      <h3>From your computer</h3>
+      <p class="muted">Choose a GEM Cutter project folder (the one that holds <code>resources/</code>), a zipped project, or a GEM XML file. You can also drop any of these onto the page.</p>
+      <div class="btn-row">
+        <button class="btn primary" id="openFolder">Choose project folder…</button>
+        <button class="btn" id="openFile">Choose .zip or .xml…</button>
+      </div>
+    </div>
+    <div>
+      <h3>Saved in this browser</h3>
+      <ul id="openList" class="plist"></ul>
+      <p id="openNone" class="muted" hidden>Nothing saved in this browser yet. Projects you work on are kept here automatically.</p>
+    </div>
+    <div>
+      <h3>Sample projects</h3>
+      <ul id="sampleList" class="plist"></ul>
+      <p class="muted">Three short invented guidelines, already marked up, to try things on.</p>
+    </div>
+  </div>
+  <div class="dlg-actions"><button class="btn ghost" data-close>Close</button></div>
+</dialog>
+
+<dialog id="dlgText" class="dlg wide tall" aria-labelledby="dlgTextT">
+  <div class="dlg-head">
+    <h2 id="dlgTextT">GEM XML</h2>
+    <div class="btn-row">
+      <button class="btn" id="xmlCopy">Copy</button>
+      <button class="btn" id="xmlSave">Download</button>
+      <button class="btn ghost" data-close>Close</button>
+    </div>
+  </div>
+  <pre id="xmlBody" class="code" tabindex="0"></pre>
+</dialog>
+
+<dialog id="dlgReport" class="dlg wide tall" aria-labelledby="dlgReportT">
+  <div class="dlg-head">
+    <h2 id="dlgReportT">Report</h2>
+    <div class="btn-row">
+      <button class="btn" id="repXsl" title="Run this report with your own modified stylesheet">Custom XSL…</button>
+      <button class="btn" id="repPrint">Print</button>
+      <button class="btn" id="repSave">Save HTML</button>
+      <button class="btn ghost" data-close>Close</button>
+    </div>
+  </div>
+  <div id="repHost" class="report-host" tabindex="0"></div>
+</dialog>
+
+<dialog id="dlgLogic" class="dlg wide" aria-labelledby="dlgLogicT">
+  <h2 id="dlgLogicT">Conditional logic</h2>
+  <div class="logic-grid">
+    <div class="logic-col">
+      <div class="logic-row" id="lgIfBox">
+        <div class="logic-label">If</div>
+        <div class="ops" data-for="lgIf"><button type="button" data-op="(">(</button><button type="button" data-op=")">)</button><button type="button" data-op="AND">AND</button><button type="button" data-op="OR">OR</button><button type="button" data-op="NOT">NOT</button></div>
+        <textarea id="lgIf" rows="6" aria-label="If"></textarea>
+      </div>
+      <div class="logic-row">
+        <div class="logic-label">Then</div>
+        <div class="ops" data-for="lgThen"><button type="button" data-op="(">(</button><button type="button" data-op=")">)</button><button type="button" data-op="AND">AND</button><button type="button" data-op="OR">OR</button><button type="button" data-op="NOT">NOT</button></div>
+        <textarea id="lgThen" rows="6" aria-label="Then"></textarea>
+      </div>
+    </div>
+    <div class="logic-col lists">
+      <div id="lgDvBox"><h3>Decision variables</h3><ul id="lgDvs" class="chips"></ul></div>
+      <div><h3 id="lgActT">Actions</h3><ul id="lgActs" class="chips"></ul></div>
+      <p class="muted">Click an item, or drag it, to place it at the cursor.</p>
+    </div>
+  </div>
+  <div class="dlg-actions"><button class="btn ghost" data-close>Cancel</button><button class="btn primary" id="lgSave">Save</button></div>
+</dialog>
+
+<dialog id="dlgConfirm" class="dlg" aria-labelledby="cfT">
+  <h2 id="cfT"></h2>
+  <p id="cfMsg"></p>
+  <div class="dlg-actions"><button class="btn ghost" id="cfNo">Cancel</button><button class="btn primary" id="cfYes">OK</button></div>
+</dialog>
+
+<dialog id="dlgAbout" class="dlg" aria-labelledby="abT">
+  <h2 id="abT">CutGL, Cutter for Guidelines</h2>
+  <p>An online port of GEM Cutter III, the Guideline Elements Model authoring tool from the Yale Center for Medical Informatics (2012). It shows GEM III documents beside the guideline they were cut from, builds new ones, and opens project folders made with the desktop version.</p>
+  <p>The GEM III schema and the six report stylesheets are the ones shipped with the desktop application. Everything runs in this page: the guideline and your markup stay in your browser, and projects you work on are kept in this browser's storage until you save them as a .zip.</p>
+  <p class="muted">Projects saved here can be unzipped next to <code>GemCutter.jar</code> and opened in the desktop application. The sample projects use invented text and are not clinical guidance.</p>
+  <div class="dlg-actions"><button class="btn primary" data-close>Close</button></div>
+</dialog>
+
+<div id="drop" class="drop" hidden><div>Drop a project folder, .zip or GEM .xml to open it</div></div>
+<div id="toasts" class="toasts" aria-live="polite"></div>
+
+<script src="src/resources.js"></script>
+<script src="src/sample_pdf.js"></script>
+<script src="src/samples.js"></script>
+<script src="src/core.js"></script>
+<script src="src/javaser.js"></script>
+<script src="src/app.js"></script>
+</body>
+</html>

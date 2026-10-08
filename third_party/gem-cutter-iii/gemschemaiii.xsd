@@ -1,0 +1,1368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://gem.yale.edu" xmlns="http://gem.yale.edu" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" attributeFormDefault="unqualified" version="3.0">
+	<xs:element name="GuidelineDocument">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:choice minOccurs="0" maxOccurs="unbounded">
+					<xs:element name="Identity">
+						<xs:complexType mixed="true">
+							<xs:choice minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="GuidelineTitle" type="GemBasicType">
+									<xs:annotation>
+										<xs:documentation>Complete title of the guideline</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="Citation">
+									<xs:annotation>
+										<xs:documentation>Bibliographic citation</xs:documentation>
+									</xs:annotation>
+									<xs:complexType mixed="true">
+										<xs:choice minOccurs="0" maxOccurs="unbounded">
+											<xs:element name="GuidelineLength" type="GemBasicType">
+												<xs:annotation>
+													<xs:documentation>Number of pages in printed
+													document</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:choice>
+										<xs:attribute name="source" type="xs:string"/>
+										<xs:attribute name="version" type="xs:string"/>
+										<xs:attribute name="id" type="xs:ID"/>
+										<xs:attribute name="lang" type="xs:NMTOKEN"/>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="GEMCutHistory">
+									<xs:annotation>
+										<xs:documentation>Record of GEM file creation</xs:documentation>							
+									</xs:annotation>
+									<xs:complexType mixed="true">
+										<xs:choice minOccurs="0" maxOccurs="unbounded">
+											<xs:element name="GEMCutVersion">
+												<xs:annotation>
+													<xs:documentation>Identification details of the current instance of the GEM file</xs:documentation>							
+												</xs:annotation>
+												<xs:complexType mixed="true">
+													<xs:choice minOccurs="0" maxOccurs="unbounded">
+														<xs:element name="GEMCutAuthor" type="GemBasicType">
+															<xs:annotation>
+																<xs:documentation>Individual responsible for creating this version of the GEM file</xs:documentation>							
+															</xs:annotation>
+														</xs:element>
+														<xs:element name="GEMCutDate" type="GemBasicType">
+															<xs:annotation>
+																<xs:documentation>Date when this version of the GEM file was created</xs:documentation>							
+															</xs:annotation>
+														</xs:element>
+													</xs:choice>
+													<xs:attribute name="source" type="xs:string"/>
+													<xs:attribute name="version" type="xs:string"/>
+													<xs:attribute name="id" type="xs:ID"/>
+													<xs:attribute name="lang" type="xs:NMTOKEN"/>
+												</xs:complexType>
+											</xs:element>
+										</xs:choice>
+										<xs:attribute name="source" type="xs:string"/>
+										<xs:attribute name="version" type="xs:string"/>
+										<xs:attribute name="id" type="xs:ID"/>
+										<xs:attribute name="lang" type="xs:NMTOKEN"/>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="ReleaseDate" type="GemBasicType">
+									<xs:annotation>
+										<xs:documentation>Date on which the guideline was released to the
+										public</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="Availability">
+									<xs:annotation>
+										<xs:documentation>Information regarding sources of a guideline and associated
+											documentation </xs:documentation>
+									</xs:annotation>
+									<xs:complexType mixed="true">
+										<xs:choice minOccurs="0" maxOccurs="unbounded">
+											<xs:element name="Electronic" type="GemBasicType">
+												<xs:annotation>
+													<xs:documentation>Information regarding sources of guideline in
+														electronic format</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="Print" type="GemBasicType">
+												<xs:annotation>
+													<xs:documentation>Information regarding sources of guideline in
+														print format</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="Contact" type="GemBasicType">
+												<xs:annotation>
+													<xs:documentation>Person or organization to contact for additional
+														information about a guideline</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:choice>
+										<xs:attribute name="source" type="xs:string"/>
+										<xs:attribute name="version" type="xs:string"/>
+										<xs:attribute name="id" type="xs:ID"/>
+										<xs:attribute name="lang" type="xs:NMTOKEN"/>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="Status" type="GemBasicType">
+									<xs:annotation>
+										<xs:documentation>Statement of whether the guideline is original or a revised or
+											updated version of a previously issued document</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="CompanionDocument">
+									<xs:annotation>
+										<xs:documentation>Refers to other documents (including Technical Reports,
+											Consumer Guidelines, Quick Reference Guidelines) produced by the guideline
+											developer relevant to the guideline</xs:documentation>
+									</xs:annotation>
+									<xs:complexType mixed="true">
+										<xs:choice minOccurs="0" maxOccurs="unbounded">
+											<xs:element name="PatientResource" type="GemBasicType">
+												<xs:annotation>
+													<xs:documentation>A patient-oriented summary of guideline content or
+														a resource intended to assist patients with guideline
+														application.</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="QuickReferenceGuide" type="GemBasicType">
+												<xs:annotation>
+													<xs:documentation>A concise document that summarizes guideline
+														recommendations for clinicians</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="TechnicalReport" type="GemBasicType">
+												<xs:annotation>
+													<xs:documentation>A document or document component that describes in
+														detail the method of guideline development</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:choice>
+										<xs:attribute name="source" type="xs:string"/>
+										<xs:attribute name="version" type="xs:string"/>
+										<xs:attribute name="id" type="xs:ID"/>
+										<xs:attribute name="lang" type="xs:NMTOKEN"/>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="Adaptation" type="GemBasicType">
+									<xs:annotation>
+										<xs:documentation>Indicates that the guideline has been adapted from another
+											guideline</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="StructuredAbstract" type="GemBasicType">
+									<xs:annotation>
+										<xs:documentation>A summary statement that describes a guideline using
+											structured headings</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:choice>
+							<xs:attribute name="source" type="xs:string"/> 
+							<xs:attribute name="version" type="xs:string"/>
+							<xs:attribute name="id" type="xs:ID"/>
+							<xs:attribute name="lang" type="xs:NMTOKEN"/>
+						</xs:complexType>
+					</xs:element>
+					
+					<xs:element name="Developer">
+						<xs:complexType mixed="true">
+							<xs:choice minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="DeveloperName" type="GemBasicType">
+									<xs:annotation>
+										<xs:documentation>Organization(s) responsible for developing the
+										guideline</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="CommitteeName">
+									<xs:annotation>
+										<xs:documentation>Formal name of committee within developer organization
+											responsible for developing guideline</xs:documentation>
+									</xs:annotation>
+									<xs:complexType mixed="true">
+										<xs:choice minOccurs="0" maxOccurs="unbounded">
+											<xs:element name="CommitteeExpertise" type="GemBasicType">
+												<xs:annotation>
+													<xs:documentation>Expertise present within the group that authored
+														guideline</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="CommitteeMember">
+												<xs:annotation>
+													<xs:documentation>Name of member of guideline development
+													committee</xs:documentation>
+												</xs:annotation>
+												<xs:complexType mixed="true">
+													<xs:choice minOccurs="0" maxOccurs="unbounded">
+														<xs:element name="MemberExpertise" type="GemBasicType">
+															<xs:annotation>
+															<xs:documentation>Professional expertise of individual
+															guideline committee member</xs:documentation>
+															</xs:annotation>
+														</xs:element>
+														<xs:element name="MemberConflict" type="GemBasicType">
+															<xs:annotation>
+																<xs:documentation>A potential source of bias (e.g., financial or intellectual) related to a panelist or potential panelist that could influence the CPG development process</xs:documentation>
+															</xs:annotation>
+														</xs:element>
+														<xs:element name="MemberRole" type="GemBasicType">
+															<xs:annotation>
+																<xs:documentation>Expected function of a committee member, e.g,, chair, epidemiologist, or implementation specialist</xs:documentation>
+															</xs:annotation>
+														</xs:element>
+													</xs:choice>
+													<xs:attribute name="source" type="xs:string"/>
+													<xs:attribute name="version" type="xs:string"/>
+													<xs:attribute name="id" type="xs:ID"/>
+													<xs:attribute name="lang" type="xs:NMTOKEN"/>
+												</xs:complexType>
+											</xs:element>
+										</xs:choice>
+										<xs:attribute name="source" type="xs:string"/>
+										<xs:attribute name="version" type="xs:string"/>
+										<xs:attribute name="id" type="xs:ID"/>
+										<xs:attribute name="lang" type="xs:NMTOKEN"/>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="Funding" type="GemBasicType">
+									<xs:annotation>
+										<xs:documentation>Source of financial support for guideline
+										development</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="Endorser" type="GemBasicType">
+									<xs:annotation>
+										<xs:documentation>Organization that has endorsed the
+										guideline</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="ComparableGuideline" type="GemBasicType">
+									<xs:annotation>
+										<xs:documentation>Another guideline on the same or similar
+										topic</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="RoleOfSponsor" type="GemBasicType">
+									<xs:annotation>
+										<xs:documentation>The sponsor’s part in developing, modifying, and reporting the
+											guideline</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="ConflictOfInterest">
+									<xs:annotation>
+										<xs:documentation>Potential situations in which financial or other
+											considerations may compromise, or have the appearance of compromising, a
+											developer’s professional judgment</xs:documentation>
+									</xs:annotation>
+									<xs:complexType mixed="true">
+										<xs:choice minOccurs="0" maxOccurs="unbounded">									
+											<xs:element name="COIPolicy" type="GemBasicType">
+												<xs:annotation>
+													<xs:documentation>Principles and strategies adopted by developer to address potential conflicts</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="COIDisclosure" type="GemBasicType">
+												<xs:annotation>
+													<xs:documentation>Report of potential and real conflicts of interest and how they are addressed</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:choice>
+										<xs:attribute name="source" type="xs:string"/> 
+										<xs:attribute name="version" type="xs:string"/>
+										<xs:attribute name="id" type="xs:ID"/>
+										<xs:attribute name="lang" type="xs:NMTOKEN"/>
+									</xs:complexType>
+								</xs:element>
+							</xs:choice>
+							<xs:attribute name="source" type="xs:string"/> 
+							<xs:attribute name="version" type="xs:string"/>
+							<xs:attribute name="id" type="xs:ID"/>
+							<xs:attribute name="lang" type="xs:NMTOKEN"/>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="Purpose">
+						<xs:complexType mixed="true">
+							<xs:choice minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="MainFocus" type="GemBasicType">
+									<xs:annotation>
+										<xs:documentation>Primary disease/condition, treatment/intervention, health
+											practice, service, or technology addressed in the guideline main
+										focus</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="Rationale" type="GemBasicType">
+									<xs:annotation>
+										<xs:documentation>Reasons for developing recommendations including why the
+											guideline was developed/needed, e.g., evidence of practice variation or
+											inappropriate practice</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="Objective" type="GemBasicType">
+									<xs:annotation>
+										<xs:documentation>General goals that implementation of the guideline is intended
+											to bring about</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="AvailableOption" type="GemBasicType">
+									<xs:annotation>
+										<xs:documentation>Principal alternative preventive, diagnostic, or therapeutic
+											strategies considered</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="HealthOutcome" type="GemBasicType">
+									<xs:annotation>
+										<xs:documentation>The most important specific outcomes (health, economic, etc)
+											considered in the guideline</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="Exception" type="GemBasicType">
+									<xs:annotation>
+										<xs:documentation>Situations in which socially relevant factors permit an
+											exception to be made in applying the guidelines; including home and family
+											situation, constraints on health care delivery system</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:choice>
+							<xs:attribute name="source" type="xs:string"/> 
+							<xs:attribute name="version" type="xs:string"/>
+							<xs:attribute name="id" type="xs:ID"/>
+							<xs:attribute name="lang" type="xs:NMTOKEN"/>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="IntendedAudience">
+						<xs:complexType mixed="true">
+							<xs:choice minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="Users" type="GemBasicType">
+									<xs:annotation>
+										<xs:documentation>Intended users of guideline information</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="CareSetting" type="GemBasicType">
+									<xs:annotation>
+										<xs:documentation>The settings in which the guideline is intended for
+										use</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:choice>
+							<xs:attribute name="source" type="xs:string"/> 
+							<xs:attribute name="version" type="xs:string"/>
+							<xs:attribute name="id" type="xs:ID"/>
+							<xs:attribute name="lang" type="xs:NMTOKEN"/>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="MethodOfDevelopment">
+						<xs:complexType mixed="true">
+							<xs:choice minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="DescriptionEvidenceCollection">
+									<xs:annotation>
+										<xs:documentation>A description of methods used to collect, identify, and
+											retrieve scientific evidence on each question on which recommendations are
+											based, including details on computer searches (including dates) and use of
+											personal files and bibliographies</xs:documentation>
+									</xs:annotation>
+									<xs:complexType mixed="true">
+										<xs:choice minOccurs="0" maxOccurs="unbounded">
+											<xs:element name="EvidenceTimePeriod" type="GemBasicType">
+												<xs:annotation>
+													<xs:documentation>Publication date of earliest and most recent
+														evidence considered</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="NumberSourceDocuments" type="GemBasicType">
+												<xs:annotation>
+													<xs:documentation>Number of source documents identified
+													</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="EvidenceSelectionCriteria" type="GemBasicType">
+												<xs:annotation>
+													<xs:documentation>Methods used to choose the evidence that informs
+														guideline development, including inclusion and exclusion
+														criteria for specific studies</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:choice>
+										<xs:attribute name="source" type="xs:string"/>
+										<xs:attribute name="version" type="xs:string"/>
+										<xs:attribute name="id" type="xs:ID"/>
+										<xs:attribute name="lang" type="xs:NMTOKEN"/>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="DescriptionEvidenceCombination">
+									<xs:annotation>
+										<xs:documentation>Method of synthesis used to combine the scientific evidence
+											quantitatively or otherwise</xs:documentation>
+									</xs:annotation>
+									<xs:complexType mixed="true">
+										<xs:attribute name="source" type="xs:string"/>
+										<xs:attribute name="version" type="xs:string"/>
+										<xs:attribute name="id" type="xs:ID"/>
+										<xs:attribute name="lang" type="xs:NMTOKEN"/>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="CostAnalysis" type="GemBasicType">
+									<xs:annotation>
+										<xs:documentation>Describes any formal cost analysis
+										performed</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="SpecificationHarmBenefit" type="GemBasicType">
+									<xs:annotation>
+										<xs:documentation>Qualitative description of anticipated benefits and potential
+											risks associated with implementation of guideline</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="QuantificationHarmBenefit" type="GemBasicType">
+									<xs:annotation>
+										<xs:documentation>Quantification of benefits or risks associated with
+											implementation of guideline</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="RoleValueJudgment" type="GemBasicType">
+									<xs:annotation>
+										<xs:documentation>Implicit or explicit process for judging relative desirability
+											of health, economic, and process outcomes associated with alternative
+											practices</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="RolePatientPreference" type="GemBasicType">
+									<xs:annotation>
+										<xs:documentation>Role of patient preferences for possible outcomes of care when
+											the appropriateness of a clinical intervention involves a substantial
+											element of personal choice or values</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="QualifyingStatement" type="GemBasicType">
+									<xs:annotation>
+										<xs:documentation>Important caveat relating to a major recommendation.
+											Identifies an area of uncertainty</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="MethodsToReachJudgment" type="GemBasicType">
+									<xs:annotation>
+										<xs:documentation>Group judgment techniques used to reach judgment on
+											recommendations; a description of how the developer made the transition from
+											evidence to recommendation</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="RatingScheme">
+									<xs:annotation>
+										<xs:documentation>Criteria for rating quality of evidence and/or strength of
+											recommendation</xs:documentation>
+									</xs:annotation>
+									<xs:complexType mixed="true">
+										<xs:choice minOccurs="0" maxOccurs="unbounded">
+											<xs:element name="EvidenceQualityRatingScheme" type="GemBasicType">
+												<xs:annotation>
+													<xs:documentation>Criteria for rating quality of
+													evidence</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="RecommendationStrengthRatingScheme" type="GemBasicType">
+												<xs:annotation>
+													<xs:documentation>Criteria for rating strength of
+													recommendation</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:choice>
+										<xs:attribute name="source" type="xs:string"/>
+										<xs:attribute name="version" type="xs:string"/>
+										<xs:attribute name="id" type="xs:ID"/>
+										<xs:attribute name="lang" type="xs:NMTOKEN"/>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="PatientAndPublicInvolvement" type="GemBasicType">
+									<xs:annotation>
+										<xs:documentation>Role of patients, advocates, consumer organizations in guideline development and review</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:choice>
+							<xs:attribute name="source" type="xs:string"/> 
+							<xs:attribute name="version" type="xs:string"/>
+							<xs:attribute name="id" type="xs:ID"/>
+							<xs:attribute name="lang" type="xs:NMTOKEN"/>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="TargetPopulation">
+						<xs:complexType mixed="true">
+							<xs:choice minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="Eligibility">
+									<xs:annotation>
+										<xs:documentation>Describes population that the recommendations are intended to
+											affect; identifies restrictions on guideline use such as within a managed
+											care organization or geographic region</xs:documentation>
+									</xs:annotation>
+									<xs:complexType mixed="true">
+										<xs:choice minOccurs="0" maxOccurs="unbounded">
+											<xs:element name="InclusionCriterion" >
+												<xs:annotation>
+													<xs:documentation>A criterion whose presence is necessary for the
+														guideline recommendations to be applicable</xs:documentation>
+												</xs:annotation>
+												<xs:complexType>
+													<xs:choice minOccurs="0" maxOccurs="unbounded">
+														<xs:element name="InclusionCriterionCode" type="GemCodeType" >
+															<xs:annotation>
+																<xs:documentation>Identifier selected from a standard terminology that describes an inclusion criterion</xs:documentation>
+															</xs:annotation>
+														</xs:element>
+													</xs:choice>
+													<xs:attribute name="source" type="xs:string"/>
+													<xs:attribute name="version" type="xs:string"/>
+													<xs:attribute name="id" type="xs:ID"/>
+													<xs:attribute name="lang" type="xs:NMTOKEN"/>
+												</xs:complexType>
+												
+											</xs:element>
+											<xs:element name="ExclusionCriterion" >
+												<xs:annotation>
+													<xs:documentation>A criterion whose presence excludes the
+														applicability of the recommendations</xs:documentation>
+												</xs:annotation>
+												<xs:complexType>
+													<xs:choice minOccurs="0" maxOccurs="unbounded">
+														<xs:element name="ExclusionCriterionCode" type="GemCodeType" >
+															<xs:annotation>
+																<xs:documentation>Identifier selected from a standard terminology that describes an exclusion criterion</xs:documentation>
+															</xs:annotation>
+														</xs:element>
+													</xs:choice>
+													<xs:attribute name="source" type="xs:string"/>
+													<xs:attribute name="version" type="xs:string"/>
+													<xs:attribute name="id" type="xs:ID"/>
+													<xs:attribute name="lang" type="xs:NMTOKEN"/>
+												</xs:complexType>
+												
+											</xs:element>
+										</xs:choice>
+										<xs:attribute name="source" type="xs:string"/>
+										<xs:attribute name="version" type="xs:string"/>
+										<xs:attribute name="id" type="xs:ID"/>
+										<xs:attribute name="lang" type="xs:NMTOKEN"/>
+									</xs:complexType>
+								</xs:element>
+							</xs:choice>
+							<xs:attribute name="source" type="xs:string"/> 
+							<xs:attribute name="version" type="xs:string"/>
+							<xs:attribute name="id" type="xs:ID"/>
+							<xs:attribute name="lang" type="xs:NMTOKEN"/>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="KnowledgeComponents">
+						<xs:complexType mixed="true">
+							<xs:choice minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="Recommendation">
+									<xs:annotation>
+										<xs:documentation>Statement of appropriate practice and the conditions under
+											which it is to be undertaken. The statement is intended to influence
+											practitioners' behavior and/or patient outcomes. A number or brief title for
+											a specific recommendation should be stored in this
+										element.</xs:documentation>
+									</xs:annotation>
+									<xs:complexType mixed="true">
+										<xs:choice minOccurs="0" maxOccurs="unbounded">
+											
+											<xs:element maxOccurs="unbounded" minOccurs="0" type="GemBasicType"
+												name="StatementOfFact">
+												<xs:annotation>
+													<xs:documentation>A non-executable statement intended by the author to describe appropriate care.  This category includes US Preventive Services Task Force  "I Statements", i.e., the authors conclude that there is insufficient evidence to support a recommendation for or against such an action</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="Conditional">
+												<xs:annotation>
+													<xs:documentation>A recommendation applicable under circumstances
+														specified by an if-then statement. The complete text of the
+														conditional statement should be stored in this
+													element</xs:documentation>
+												</xs:annotation>
+												<xs:complexType mixed="true">
+													<xs:choice minOccurs="0" maxOccurs="unbounded">
+														<xs:element name="BenefitHarmAssessment"
+															type="GemBasicType">
+															<xs:annotation>
+																<xs:documentation>The outcome of weighing benefits against risks, harms, and costs that expresses equilibrium or imbalance.</xs:documentation>
+															</xs:annotation>
+														</xs:element>
+														<xs:element name="DecisionVariable">
+															<xs:annotation>
+															<xs:documentation>A condition that must be tested to
+															indicate the appropriateness of a conditional
+															recommendation. Store only a single variable in each
+															decision variable element</xs:documentation>
+															</xs:annotation>
+															<xs:complexType mixed="true">
+															<xs:choice minOccurs="0" maxOccurs="unbounded">
+															<xs:element name="Value" type="GemBasicType">
+															<xs:annotation>
+															<xs:documentation>A specified state of a
+															decision variable</xs:documentation>
+															</xs:annotation>
+															</xs:element>
+																<xs:element name="DecisionVariableCode" type="GemCodeType">
+																	<xs:annotation>
+																		<xs:documentation>Identifier selected from a standard terminology that describes a decision variable</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+															<xs:element name="DecisionVariableDescription" >
+															<xs:annotation>
+															<xs:documentation>Text that provides and
+															amplifies information about a decision
+															variable</xs:documentation>
+															</xs:annotation>
+															<xs:complexType>
+															<xs:choice minOccurs="0"
+															maxOccurs="unbounded">
+															<xs:element name="IntentionalVagueness"
+															type="GemBasicType">
+															<xs:annotation>
+															<xs:documentation>An indication of the reason for deliberate underspecification of a recommendation's conditions or actions.</xs:documentation>
+															</xs:annotation>
+															</xs:element>
+															</xs:choice>
+															</xs:complexType>
+															</xs:element>
+															<xs:element name="TestParameter">
+															<xs:annotation>
+															<xs:documentation>Information about the
+															quality of a decision
+															variable</xs:documentation>
+															</xs:annotation>
+															<xs:complexType mixed="true">
+															<xs:choice minOccurs="0"
+															maxOccurs="unbounded">
+															<xs:element name="Sensitivity"
+															type="GemBasicType">
+															<xs:annotation>
+															<xs:documentation>An indication
+															of the probability of the
+															decision variable being
+															present under specific
+															clinical
+															circumstances</xs:documentation>
+															</xs:annotation>
+															</xs:element>
+															<xs:element name="Specificity"
+															type="GemBasicType">
+															<xs:annotation>
+															<xs:documentation>An indication
+															of the probability of the
+															decision variable being
+															absent under specific
+															clinical
+															circumstances</xs:documentation>
+															</xs:annotation>
+															</xs:element>
+															<xs:element name="PredictiveValue"
+															type="GemBasicType">
+															<xs:annotation>
+															<xs:documentation>An indication
+															of the probability of an
+															outcome occurring when a
+															particular value of the
+															decision variable is
+															present</xs:documentation>
+															</xs:annotation>
+															</xs:element>
+															</xs:choice>
+															<xs:attribute name="source" type="xs:string"/>
+															<xs:attribute name="version" type="xs:string"/>
+															<xs:attribute name="id" type="xs:ID"/>
+															<xs:attribute name="lang" type="xs:NMTOKEN"
+															/>
+															</xs:complexType>
+															</xs:element>
+															<xs:element name="DecisionVariableCost"
+															type="GemBasicType">
+															<xs:annotation>
+															<xs:documentation>The cost of testing a
+															decision variable</xs:documentation>
+															</xs:annotation>
+															</xs:element>
+															</xs:choice>
+															<xs:attribute name="source" type="xs:string"/>
+															<xs:attribute name="version" type="xs:string"/>
+															<xs:attribute name="id" type="xs:ID"/>
+															<xs:attribute name="decision.variable.id"
+															type="xs:string"/>
+															</xs:complexType>
+														</xs:element>
+														<xs:element name="Action">
+															<xs:annotation>
+															<xs:documentation>Appropriate activity to be carried out
+															given the specific circumstances defined by values
+															of decision variables. Store only a single action
+															each Action element</xs:documentation>
+															</xs:annotation>
+															<xs:complexType mixed="true">
+															<xs:choice minOccurs="0" maxOccurs="unbounded">
+															<xs:element name="ActionActor" type="GemBasicType">
+															<xs:annotation>
+																<xs:documentation>The person(s) or role intended to carry out the recommended activity.</xs:documentation>
+															</xs:annotation>
+															</xs:element>
+																<xs:element name="ActionCode" type="GemCodeType">
+																	<xs:annotation>
+																		<xs:documentation> Identifier selected from a standard terminology that describes an action</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																
+
+															<xs:element name="ActionVerb" type="GemBasicType">
+															<xs:annotation>
+															<xs:documentation>The word or phrase in a recommendation that expresses action, state, or relationship</xs:documentation>
+															</xs:annotation>
+															</xs:element>
+																<xs:element name="ActionDeonticTerm" type="GemBasicType">
+																	<xs:annotation>
+																		<xs:documentation>The word of phrase that defines the level of obligation or permission of a recommendation.</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																
+															<xs:element name="ActionVerbComplement"
+															type="GemBasicType">
+															<xs:annotation>
+																<xs:documentation>Word or phrase that completes the sense of a verb and includes direct and indirect objects</xs:documentation>
+															</xs:annotation>
+															</xs:element>
+
+															<xs:element name="ActionBenefit" type="GemBasicType">
+															<xs:annotation>
+															<xs:documentation>An improvement in status
+															of some measured outcome that may occur
+															as a result of following a
+															recommendation</xs:documentation>
+															</xs:annotation>
+															</xs:element>
+															<xs:element name="ActionRiskHarm"
+															type="GemBasicType">
+															<xs:annotation>
+															<xs:documentation>Risk or adverse outcome
+															associated with a specified
+															action</xs:documentation>
+															</xs:annotation>
+															</xs:element>
+															<xs:element name="ActionDescription">
+															<xs:annotation>
+															<xs:documentation>Text that provides and
+															amplifies information about an
+															action</xs:documentation>
+															</xs:annotation>
+															<xs:complexType>
+															<xs:choice minOccurs="0"
+															maxOccurs="unbounded">
+															<xs:element name="IntentionalVagueness"
+															type="GemBasicType">
+															<xs:annotation>
+															<xs:documentation>An indication of the reason for deliberate underspecification of a recommendation's conditions or actions.</xs:documentation>
+															</xs:annotation>
+															</xs:element>
+															</xs:choice>
+															</xs:complexType>
+															</xs:element>
+															<xs:element name="ActionCost" type="GemBasicType">
+															<xs:annotation>
+															<xs:documentation>Cost of performing a
+															specific action</xs:documentation>
+															</xs:annotation>
+															</xs:element>
+															<xs:element name="ActionValue" type="GemBasicType">
+															<xs:annotation>
+															<xs:documentation>A specified state of an
+															action</xs:documentation>
+															</xs:annotation>
+															</xs:element>
+															<xs:element name="ActionType">
+															<xs:annotation>
+															<xs:documentation>A categorization of activity directed by a conditional</xs:documentation>
+															</xs:annotation>
+															<xs:simpleType>
+															<xs:restriction base="xs:string">
+															<xs:enumeration value="test"/>
+															<xs:enumeration value="inquire"/>
+															<xs:enumeration value="examine"/>
+															<xs:enumeration value="prescribe"/>
+															<xs:enumeration value="procedure"/>
+															<xs:enumeration value="educate/counsel"/>
+															<xs:enumeration value="dispose"/>
+															<xs:enumeration value="consult/refer"/>
+															<xs:enumeration value="conclude"/>
+															<xs:enumeration value="monitor"/>
+															<xs:enumeration value="document"/>
+															<xs:enumeration value="advocate"/>
+															<xs:enumeration value="prevent"/>
+															<xs:enumeration value="prepare"/>
+															</xs:restriction>
+															</xs:simpleType>
+															</xs:element>
+															</xs:choice>
+															<xs:attribute name="source" type="xs:string"/>
+															<xs:attribute name="version" type="xs:string"/>
+															<xs:attribute name="id" type="xs:ID"/>
+															<xs:attribute name="action.id" type="xs:string"/>
+															</xs:complexType>
+														</xs:element>
+														<xs:element name="Reason" type="GemBasicType">
+															<xs:annotation>
+															<xs:documentation>An explanation or justification for a
+															recommendation</xs:documentation>
+															</xs:annotation>
+														</xs:element>
+														<xs:element name="EvidenceQuality" >
+															<xs:annotation>
+																<xs:documentation>An indication of methodologic rigor of the studies that support the specified recommendation</xs:documentation>
+															</xs:annotation>
+															<xs:complexType>
+																<xs:choice minOccurs="0" maxOccurs="unbounded">
+																	<xs:element name="EvidenceQualityDescription" type="GemBasicType">
+																		<xs:annotation>
+																			<xs:documentation>Description of the applicability, quantity (including completeness) and consistency of the aggregate available evidence. It may include an explanation of the part played by values, opinion, theory, and clinical experience in deriving the recommendation</xs:documentation>
+																		</xs:annotation>
+																	</xs:element>
+																	<xs:element name="Disagreement" type="GemBasicType">
+																		<xs:annotation>
+																			<xs:documentation>Description and explanation of any differences of opinion regarding the recommendation, including minority report</xs:documentation>
+																		</xs:annotation>
+																	</xs:element>
+																</xs:choice>															
+															<xs:attribute name="source" type="xs:string"/>
+															<xs:attribute name="version" type="xs:string"/>
+															<xs:attribute name="id" type="xs:ID"/>
+															<xs:attribute name="action.id" type="xs:string"/>
+															</xs:complexType>
+														</xs:element>
+														<xs:element name="RecommendationStrength">
+															<xs:annotation>
+															<xs:documentation>An indication of the guideline
+															developers' level of support for a given
+															recommendation</xs:documentation>
+															</xs:annotation>
+															<xs:complexType>
+																<xs:choice minOccurs="0" maxOccurs="unbounded">
+																<xs:element name="RecommendationStrengthCode" type="GemCodeType">
+																	<xs:annotation>
+																		<xs:documentation> Identifier selected from a standard terminology that describes recommendation strength</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+															</xs:choice>
+															</xs:complexType>
+														</xs:element>
+														<xs:element name="Flexibility" type="GemBasicType">
+															<xs:annotation>
+															<xs:documentation>Indication of options in performing
+															conditinal</xs:documentation>
+															</xs:annotation>
+														</xs:element>
+														<xs:element name="Logic" type="GemBasicType">
+															<xs:annotation>
+															<xs:documentation>Boolean operators that indicate how
+															directives are to be combined</xs:documentation>
+															</xs:annotation>
+														</xs:element>
+														<xs:element name="Cost" type="GemBasicType">
+															<xs:annotation>
+															<xs:documentation>Overall cost of performing this
+															recommendation</xs:documentation>
+															</xs:annotation>
+														</xs:element>
+														<xs:element name="Linkage" type="GemBasicType">
+															<xs:annotation>
+															<xs:documentation>Indicator of a relationship between
+															this recommendation and other knowledge
+															component(s)</xs:documentation>
+															</xs:annotation>
+														</xs:element>
+														<xs:element name="Reference" type="GemBasicType">
+															<xs:annotation>
+															<xs:documentation>Specific citation relevant to this
+															conditional recommendation</xs:documentation>
+															</xs:annotation>
+														</xs:element>
+														<xs:element name="Certainty" type="GemBasicType">
+															<xs:annotation>
+															<xs:documentation>Indication of the likelihood that this
+															recommendation will lead to specified
+															outcomes</xs:documentation>
+															</xs:annotation>
+														</xs:element>
+														<xs:element name="Goal" type="GemBasicType">
+															<xs:annotation>
+															<xs:documentation>The state that a recommendation is
+															intended to achieve, maintain, or
+															avoid</xs:documentation>
+															</xs:annotation>
+														</xs:element>
+
+
+													</xs:choice>
+													<xs:attribute name="source" type="xs:string"/>
+													<xs:attribute name="version" type="xs:string"/>
+													<xs:attribute name="id" type="xs:ID"/>
+													<xs:attribute name="lang" type="xs:NMTOKEN"/>
+												</xs:complexType>
+											</xs:element>
+											<xs:element name="Imperative">
+												<xs:annotation>
+													<xs:documentation>Recommendation directed at the entire target
+														population without limitation. The complete text of the
+														imperative statement should be stored in this
+													element</xs:documentation>
+												</xs:annotation>
+												<xs:complexType mixed="true">
+													<xs:choice minOccurs="0" maxOccurs="unbounded">
+														<xs:element name="BenefitHarmAssessment"
+															type="GemBasicType">
+															<xs:annotation>
+																<xs:documentation>The outcome of weighing benefits against risks, harms, and costs that expresses equilibrium or imbalance.</xs:documentation>
+															</xs:annotation>
+														</xs:element>
+														<xs:element name="Scope">
+															<xs:annotation>
+															<xs:documentation>Implicit eligibility criteria for an
+															imperative statement</xs:documentation>
+															</xs:annotation>
+															<xs:complexType>
+																<xs:choice minOccurs="0" maxOccurs="unbounded">
+																	<xs:element name="ScopeCode" type="GemCodeType" >
+																		<xs:annotation>
+																			<xs:documentation>Identifier selected from a standard terminology that describes the scope</xs:documentation>
+																		</xs:annotation>
+																	</xs:element>
+																</xs:choice>
+																<xs:attribute name="source" type="xs:string"/>
+																<xs:attribute name="version" type="xs:string"/>
+																<xs:attribute name="id" type="xs:ID"/>
+																<xs:attribute name="lang" type="xs:NMTOKEN"/>
+															</xs:complexType>
+														</xs:element>
+														<xs:element name="Directive">
+															<xs:annotation>
+															<xs:documentation>An appropriate activity for the
+															eligible population. Store only a single activity in
+															each Directive element</xs:documentation>
+															</xs:annotation>
+															<xs:complexType mixed="true">
+															<xs:choice minOccurs="0" maxOccurs="unbounded">
+															<xs:element name="DirectiveActor" type="GemBasicType">
+															<xs:annotation>
+															<xs:documentation>The person(s) or role intended to carry out the recommended activity.</xs:documentation>
+															</xs:annotation>
+															</xs:element>
+															<xs:element name="DirectiveCode" type="GemCodeType">
+																	<xs:annotation>
+																		<xs:documentation> Identifier selected from a standard terminology that describes a directive</xs:documentation>
+																	</xs:annotation>
+															</xs:element>
+																
+															<xs:element name="DirectiveVerb" type="GemBasicType">
+															<xs:annotation>
+																<xs:documentation>The word or phrase in a recommendation that expresses action, state, or relationship</xs:documentation>
+															</xs:annotation>
+															</xs:element>
+																<xs:element name="DirectiveDeonticTerm" type="GemBasicType">
+																	<xs:annotation>
+																		<xs:documentation>The word of phrase that defines the level of obligation or permission of a recommendation.</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+															<xs:element name="DirectiveVerbComplement"
+															type="GemBasicType">
+															<xs:annotation>
+															<xs:documentation>Word or phrase that completes the sense of a verb and includes direct and indirect objects</xs:documentation>
+															</xs:annotation>
+															</xs:element>
+
+															<xs:element name="DirectiveBenefit"
+															type="GemBasicType">
+															<xs:annotation>
+															<xs:documentation>An improvement in status
+															that may occur as a result of following
+															a directive</xs:documentation>
+															</xs:annotation>
+															</xs:element>
+															<xs:element name="DirectiveRiskHarm"
+															type="GemBasicType">
+															<xs:annotation>
+															<xs:documentation>Risk or adverse outcome
+															associated with implementation of a
+															directive</xs:documentation>
+															</xs:annotation>
+															</xs:element>
+															<xs:element name="DirectiveDescription">
+															<xs:annotation>
+															<xs:documentation>Text that provides and
+															amplifies information about a
+															directive</xs:documentation>
+															</xs:annotation>
+															<xs:complexType>
+															<xs:choice minOccurs="0"
+															maxOccurs="unbounded">
+															
+															<xs:element name="IntentionalVagueness"
+															type="GemBasicType">
+															<xs:annotation>
+																<xs:documentation>An indication of the reason for deliberate underspecification of a recommendation's conditions or actions.</xs:documentation>
+															</xs:annotation>
+															</xs:element>
+															</xs:choice>
+															</xs:complexType>
+															</xs:element>
+															<xs:element name="DirectiveCost" type="GemBasicType">
+															<xs:annotation>
+															<xs:documentation>Cost of performing a
+															specific directive</xs:documentation>
+															</xs:annotation>
+															</xs:element>
+															<xs:element name="DirectiveValue"
+															type="GemBasicType">
+															<xs:annotation>
+															<xs:documentation>The specified state of a
+															directive</xs:documentation>
+															</xs:annotation>
+															</xs:element>
+															<xs:element name="DirectiveType">
+															<xs:annotation>
+															<xs:documentation>A categorization of activity directed by an	imperative</xs:documentation>
+															</xs:annotation>
+															<xs:simpleType>
+															<xs:restriction base="xs:string">
+															<xs:enumeration value="test"/>
+															<xs:enumeration value="inquire"/>
+															<xs:enumeration value="examine"/>
+															<xs:enumeration value="prescribe"/>
+															<xs:enumeration value="procedure"/>
+															<xs:enumeration value="educate/counsel"/>
+															<xs:enumeration value="dispose"/>
+															<xs:enumeration value="consult/refer"/>
+															<xs:enumeration value="conclude"/>
+															<xs:enumeration value="monitor"/>
+															<xs:enumeration value="document"/>
+															<xs:enumeration value="advocate"/>
+															<xs:enumeration value="prevent"/>
+															<xs:enumeration value="prepare"/>
+															</xs:restriction>
+															</xs:simpleType>
+
+															</xs:element>
+															</xs:choice>
+															<xs:attribute name="source" type="xs:string"/>
+															<xs:attribute name="version" type="xs:string"/>
+															<xs:attribute name="id" type="xs:ID"/>
+															<xs:attribute name="directive.id" type="xs:string"/>
+															</xs:complexType>
+														</xs:element>
+														<xs:element name="Reason" type="GemBasicType">
+															<xs:annotation>
+															<xs:documentation>An explanation or justification for a
+															recommendation</xs:documentation>
+															</xs:annotation>
+														</xs:element>
+														<xs:element name="EvidenceQuality" >
+															<xs:annotation>
+																<xs:documentation>An indication of methodologic rigor of the studies that support the specified recommendation and the level of confidence in (certainty regarding) the evidence underpinning the recommendation</xs:documentation>
+															</xs:annotation>
+															<xs:complexType>
+																<xs:choice minOccurs="0" maxOccurs="unbounded">
+																	<xs:element name="EvidenceQualityDescription" type="GemBasicType">
+																		<xs:annotation>
+																			<xs:documentation>Description of the applicability, quantity (including completeness) and consistency of the aggregate available evidence. It may include an explanation of the part played by values, opinion, theory, and clinical experience in deriving the recommendation</xs:documentation>
+																		</xs:annotation>
+																	</xs:element>
+																	<xs:element name="Disagreement" type="GemBasicType">
+																		<xs:annotation>
+																			<xs:documentation>Description and explanation of any differences of opinion regarding the recommendation, including minority report</xs:documentation>
+																		</xs:annotation>
+																	</xs:element>
+																</xs:choice>															
+																<xs:attribute name="source" type="xs:string"/>
+																<xs:attribute name="version" type="xs:string"/>
+																<xs:attribute name="id" type="xs:ID"/>
+																<xs:attribute name="action.id" type="xs:string"/>
+															</xs:complexType>
+														</xs:element>
+														<xs:element name="RecommendationStrength">
+															<xs:annotation>
+															<xs:documentation>An indication of the guideline
+															developers' level of support for a given
+															recommendation</xs:documentation>
+															</xs:annotation>
+															<xs:complexType>
+																<xs:choice minOccurs="0" maxOccurs="unbounded">
+																<xs:element name="RecommendationStrengthCode" type="GemCodeType">
+																	<xs:annotation>
+																		<xs:documentation>Identifier selected from a standard terminology that describes recommendation strength </xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+															</xs:choice>
+															</xs:complexType>
+														</xs:element>
+														<xs:element name="Flexibility" type="GemBasicType">
+															<xs:annotation>
+															<xs:documentation>Indication of options in performing
+															imperative</xs:documentation>
+															</xs:annotation>
+														</xs:element>
+														<xs:element name="Logic" type="GemBasicType">
+															<xs:annotation>
+															<xs:documentation>Boolean operators that indicate how
+															directives are to be combined</xs:documentation>
+															</xs:annotation>
+														</xs:element>
+														<xs:element name="Cost" type="GemBasicType">
+															<xs:annotation>
+															<xs:documentation>Overall cost of performing this
+															recommendation</xs:documentation>
+															</xs:annotation>
+														</xs:element>
+														<xs:element name="Linkage" type="GemBasicType">
+															<xs:annotation>
+															<xs:documentation>Indicator of a relationship between
+															this recommendation and other knowledge
+															component(s)</xs:documentation>
+															</xs:annotation>
+														</xs:element>
+														<xs:element name="Reference" type="GemBasicType">
+															<xs:annotation>
+															<xs:documentation>Specific citation relevant to this
+															imperative recommendation</xs:documentation>
+															</xs:annotation>
+														</xs:element>
+														<xs:element name="Certainty" type="GemBasicType">
+															<xs:annotation>
+															<xs:documentation>Indication of the likelihood that this
+															recommendation will lead to specified
+															outcomes</xs:documentation>
+															</xs:annotation>
+														</xs:element>
+														<xs:element name="Goal" type="GemBasicType">
+															<xs:annotation>
+															<xs:documentation>The state that a recommendation is
+															intended to achieve, maintain, or
+															avoid</xs:documentation>
+															</xs:annotation>
+														</xs:element>
+
+
+													</xs:choice>
+													<xs:attribute name="source" type="xs:string"/>
+													<xs:attribute name="version" type="xs:string"/>
+													<xs:attribute name="id" type="xs:ID"/>
+													<xs:attribute name="lang" type="xs:NMTOKEN"/>
+												</xs:complexType>
+											</xs:element>
+											<xs:element name="RecommendationNotes" type="GemBasicType">
+												<xs:annotation>
+													<xs:documentation>Additional comments related to the development of the recommendation.</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:choice>
+										<xs:attribute name="source" type="xs:string"/>
+										<xs:attribute name="version" type="xs:string"/>
+										<xs:attribute name="id" type="xs:ID"/>
+										<xs:attribute name="lang" type="xs:NMTOKEN"/>
+									</xs:complexType>
+								</xs:element>
+
+								<xs:element name="Definition">
+									<xs:annotation>
+										<xs:documentation>Concise description of terminology relevant to the
+										guideline</xs:documentation>
+									</xs:annotation>
+									<xs:complexType mixed="true">
+										<xs:choice minOccurs="0" maxOccurs="unbounded">
+											<xs:element name="Term">
+												<xs:annotation>
+													<xs:documentation>A word or phrase defined in the
+													guideline</xs:documentation>
+												</xs:annotation>
+												<xs:complexType mixed="true">
+													<xs:choice minOccurs="0" maxOccurs="unbounded">
+														<xs:element name="TermMeaning" type="GemBasicType">
+															<xs:annotation>
+															<xs:documentation>Precise meaning of words and phrases
+															that may be unfamiliar to guideline readers; terms
+															are defined as used in this guideline
+															context</xs:documentation>
+															</xs:annotation>
+														</xs:element>
+													</xs:choice>
+													<xs:attribute name="source" type="xs:string"/>
+													<xs:attribute name="version" type="xs:string"/>
+													<xs:attribute name="id" type="xs:ID"/>
+													<xs:attribute name="lang" type="xs:NMTOKEN"/>
+												</xs:complexType>
+											</xs:element>
+										</xs:choice>
+										<xs:attribute name="source" type="xs:string"/>
+										<xs:attribute name="version" type="xs:string"/>
+										<xs:attribute name="id" type="xs:ID"/>
+										<xs:attribute name="lang" type="xs:NMTOKEN"/>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="Algorithm">
+									<xs:annotation>
+										<xs:documentation>A flowchart representation of the stages and activities in
+											health management described by the guideline</xs:documentation>
+									</xs:annotation>
+									<xs:complexType mixed="true">
+										<xs:choice minOccurs="0" maxOccurs="unbounded">
+											<xs:element name="ActionStep" type="GemBasicType">
+												<xs:annotation>
+													<xs:documentation>Specifies clinical actions that are to be
+														performed in the patient-care process (GLIF)</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="ConditionalStep" type="GemBasicType">
+												<xs:annotation>
+													<xs:documentation>Directs flow from one guideline step to another
+														based on the evaluation of a criterion (GLIF)</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="BranchStep" type="GemBasicType">
+												<xs:annotation>
+													<xs:documentation>Directs flow in alternate directions
+													(GLIF)</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+											<xs:element name="SynchronizationStep" type="GemBasicType">
+												<xs:annotation>
+													<xs:documentation>Synchronization Step represents a convergence of
+														other steps (GLIF)</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:choice>
+										<xs:attribute name="source" type="xs:string"/>
+										<xs:attribute name="version" type="xs:string"/>
+										<xs:attribute name="id" type="xs:ID"/>
+										<xs:attribute name="lang" type="xs:NMTOKEN"/>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="ResearchAgenda" type="GemBasicType">
+									<xs:annotation>
+										<xs:documentation>Proposal for further scientific investigation to correct
+											identified deficiencies in the evidence base for this guideline
+										topic</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="BackgroundInformation">
+									<xs:annotation>
+										<xs:documentation>Information relevant to the guideline’s topic but not related
+											to other Knowledge Components</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:choice>
+							<xs:attribute name="source" type="xs:string"/> 
+							<xs:attribute name="version" type="xs:string"/>
+							<xs:attribute name="id" type="xs:ID"/>
+							<xs:attribute name="lang" type="xs:NMTOKEN"/>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="Testing">
+						<xs:complexType mixed="true">
+							<xs:choice minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="ExternalReview" type="GemBasicType">
+									<xs:annotation>
+										<xs:documentation>Methods of eliciting peer review comments and vetting
+											guideline draft</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="PilotTesting" type="GemBasicType">
+									<xs:annotation>
+										<xs:documentation>Preliminary validation testing</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="FormalAppraisal">
+									<xs:annotation>
+										<xs:documentation>Evaluation of the guideline draft to appraise its validity and
+											usability (e.g., COGS), quality (e.g., AGREE) and implementability (e.g.,
+											GLIA)</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:choice>
+							<xs:attribute name="source" type="xs:string"/> 
+							<xs:attribute name="version" type="xs:string"/>
+							<xs:attribute name="id" type="xs:ID"/>
+							<xs:attribute name="lang" type="xs:NMTOKEN"/>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="RevisionPlan">
+						<xs:complexType mixed="true">
+							<xs:choice minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="Expiration" type="GemBasicType">
+									<xs:annotation>
+										<xs:documentation>Time (or date) that recommendations cease to be
+										valid</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="ScheduledReview" type="GemBasicType">
+									<xs:annotation>
+										<xs:documentation>Future time (or date) planned to review continued
+											appropriateness of recommendations</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:choice>
+							<xs:attribute name="source" type="xs:string"/> 
+							<xs:attribute name="version" type="xs:string"/>
+							<xs:attribute name="id" type="xs:ID"/>
+							<xs:attribute name="lang" type="xs:NMTOKEN"/>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="ImplementationPlan">
+						<xs:complexType mixed="true">
+							<xs:choice minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="ImplementationStrategy" type="GemBasicType">
+									<xs:annotation>
+										<xs:documentation>Specific plans for implementing the
+										recommendations</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="AnticipatedBarrier" type="GemBasicType">
+									<xs:annotation>
+										<xs:documentation>A factor that might be expected to impede operationalization
+											of the guideline</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="AnticipatedEnabler" type="GemBasicType">
+									<xs:annotation>
+										<xs:documentation>A factor that might be expected to promote operationalization
+											of the guideline</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="PerformanceMeasure" type="GemBasicType">
+									<xs:annotation>
+										<xs:documentation>Guideline-derived tool to measure the quality of care they
+											provide by defining specific, measurable elements</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:choice>
+							<xs:attribute name="source" type="xs:string"/> 
+							<xs:attribute name="version" type="xs:string"/>
+							<xs:attribute name="id" type="xs:ID"/>
+							<xs:attribute name="lang" type="xs:NMTOKEN"/>
+						</xs:complexType>
+					</xs:element>
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="GemBasicType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="version" type="xs:string"/>
+				<xs:attribute name="source" type="xs:string"/>
+				<xs:attribute name="id" type="xs:ID"/>
+				<xs:attribute name="lang" type="xs:NMTOKEN"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="GemCodeType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="version" type="xs:string"/>
+				<xs:attribute name="source" type="xs:string"/>
+				<xs:attribute name="codeset" type="xs:string"><xs:annotation><xs:documentation>Name of the dataset of concept identifiers </xs:documentation></xs:annotation></xs:attribute>
+				<xs:attribute name="id" type="xs:ID"/>
+				<xs:attribute name="lang" type="xs:NMTOKEN"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+</xs:schema>
